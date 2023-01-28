@@ -1,6 +1,17 @@
-import React from "react";
-import { Section, SectionDivider, SectionText, SectionTitle, } from "../../styles/GlobalComponents";
-import { List, ListContainer, ListItem, ListParagraph, ListTitle, } from "./SoftSkillsStyles";
+import React from 'react'
+import {
+  Section,
+  SectionDivider,
+  SectionText,
+  SectionTitle,
+} from '../../styles/GlobalComponents'
+import {
+  List,
+  ListContainer,
+  ListItem,
+  ListParagraph,
+  ListTitle,
+} from './SoftSkillsStyles'
 import { Skills } from './constants'
 
 const SoftSkills = () => (
@@ -8,7 +19,8 @@ const SoftSkills = () => (
     <SectionDivider divider />
     <SectionTitle>Soft Skills</SectionTitle>
     <SectionText>
-      I work daily with my ethical, moral and professional skills. Always seek to improve these qualities
+      I work daily with my ethical, moral and professional skills. Always seek
+      to improve these qualities
     </SectionText>
     <List>
       {Skills.map((Skill) => (
@@ -26,6 +38,6 @@ const SoftSkills = () => (
       ))}
     </List>
   </Section>
-);
+)
 
-export default SoftSkills;
+export default SoftSkills

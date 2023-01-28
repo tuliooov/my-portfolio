@@ -1,8 +1,23 @@
-import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiOutlineWhatsApp } from 'react-icons/ai';
-import { Link } from '../../styles/GlobalComponents';
-import { SocialIcons } from '../Header/HeaderStyles';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
+import React from 'react'
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiOutlineWhatsApp,
+} from 'react-icons/ai'
+import { Link } from '../../styles/GlobalComponents'
+import { SocialIcons } from '../Header/HeaderStyles'
+import {
+  CompanyContainer,
+  FooterWrapper,
+  LinkColumn,
+  LinkItem,
+  LinkList,
+  LinkTitle,
+  Slogan,
+  SocialContainer,
+  SocialIconsContainer,
+} from './FooterStyles'
 
 const Footer = () => {
   return (
@@ -21,7 +36,11 @@ const Footer = () => {
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>&copy; 2023 <Link href="https://github.com/tuliooov">  Tuliooov</Link>. Run until you fly!</Slogan>
+          <Slogan>
+            &copy; 2023{' '}
+            <Link href="https://github.com/tuliooov"> Tuliooov</Link>. Run until
+            you fly!
+          </Slogan>
         </CompanyContainer>
         <SocialContainer>
           <SocialIcons href="https://github.com/tuliooov">
@@ -38,9 +57,8 @@ const Footer = () => {
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
-
     </FooterWrapper>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

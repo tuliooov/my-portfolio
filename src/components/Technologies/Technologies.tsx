@@ -1,6 +1,17 @@
-import React from "react";
-import { Section, SectionDivider, SectionText, SectionTitle, } from "../../styles/GlobalComponents";
-import { List, ListContainer, ListItem, ListParagraph, ListTitle, } from "./TechnologiesStyles";
+import React from 'react'
+import {
+  Section,
+  SectionDivider,
+  SectionText,
+  SectionTitle,
+} from '../../styles/GlobalComponents'
+import {
+  List,
+  ListContainer,
+  ListItem,
+  ListParagraph,
+  ListTitle,
+} from './TechnologiesStyles'
 import { Skills, OtherSkills } from './Skills'
 
 const Technologies = () => (
@@ -8,7 +19,8 @@ const Technologies = () => (
     <SectionDivider divider />
     <SectionTitle>Hard Skills</SectionTitle>
     <SectionText>
-      I've worked with multiple technologies as a developer to develop & maintain my projects.
+      I`ve worked with multiple technologies as a developer to develop &
+      maintain my projects.
     </SectionText>
     <List>
       {Skills.map((Skill) => (
@@ -35,6 +47,6 @@ const Technologies = () => (
       ))}
     </List>
   </Section>
-);
+)
 
-export default Technologies;
+export default Technologies

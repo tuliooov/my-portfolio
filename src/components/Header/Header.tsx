@@ -1,13 +1,36 @@
-import Link from 'next/link';
-import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiOutlineWhatsApp } from 'react-icons/ai';
-import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
+import Link from 'next/link'
+import React from 'react'
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiOutlineWhatsApp,
+} from 'react-icons/ai'
+import {
+  Container,
+  Div1,
+  Div2,
+  Div3,
+  NavLink,
+  SocialIcons,
+} from './HeaderStyles'
 
 const Header = () => (
   <Container>
     <Div1>
-      <Link href="/" style={{ display: 'flex', alignItems: 'center', color: "white" }}>
-          <img src="/profile.jpeg" height={40} width={40} style={{ borderRadius: '100%' }} /> <span style={{ marginLeft: 10, marginTop: 7, fontSize: 20 }} >Marco Túlio</span>
+      <Link
+        href="/"
+        style={{ display: 'flex', alignItems: 'center', color: 'white' }}
+      >
+        <img
+          src="/profile.jpeg"
+          height={40}
+          width={40}
+          style={{ borderRadius: '100%' }}
+        />{' '}
+        <span style={{ marginLeft: 10, marginTop: 7, fontSize: 20 }}>
+          Marco Túlio
+        </span>
       </Link>
     </Div1>
     <Div2>
@@ -21,7 +44,7 @@ const Header = () => (
           <NavLink>Skills</NavLink>
         </Link>
       </li>
-      <li> 
+      <li>
         <Link href="#about">
           <NavLink>About</NavLink>
         </Link>
@@ -42,6 +65,6 @@ const Header = () => (
       </SocialIcons>
     </Div3>
   </Container>
-);
+)
 
-export default Header;
+export default Header
