@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'Buttons and Cursors',
+    title: 'Chat',
     date: '2023-01-28',
     description:
       'Develop a desktop chat, which can be responsive. You can go further and add animations, or even implement a functional chat.',
