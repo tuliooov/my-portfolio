@@ -1,10 +1,8 @@
 export default {
-  // Temp fonts
   fonts: {
     title: 'Open Sans, sans-serif',
     main: 'Open Sans, sans-serif',
   },
-  // Colors for layout
   colors: {
     primary1: 'hsl(204,23.8%,95.9%)',
     background1: '#1c1c1c',
@@ -13,7 +11,6 @@ export default {
     background2: 'hsl(232.7,27.3%,23.7%)',
     link: '#c74545',
   },
-  // Breakpoints for responsive design
   breakpoints: {
     xs: 'screen and (max-width: 450px)',
     sm: 'screen and (max-width: 640px)',

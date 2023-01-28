@@ -1,5 +1,16 @@
 export const projects = [
   {
+    title: 'Buttons and Cursors',
+    date: '2023-01-28',
+    description:
+      'Each button variant follows an interface that dictates what a button within the application accepts to receive as a property.',
+    image: './images/buttons-and-cursors.png',
+    tags: ['Vite', 'CSS', 'Typescript', 'Github Pages'],
+    source: 'https://github.com/tuliooov/botoes-e-cursores-bora-codar',
+    visit: 'https://tuliooov.github.io/botoes-e-cursores-bora-codar/',
+    id: 3,
+  },
+  {
     title: 'Coffee Delivery',
     date: '2023-01-27',
     description:
@@ -20,7 +31,7 @@ export const projects = [
       'https://github.com/tuliooov/ignite-2022-reactjs-coffee-challenge-02-delivery',
     visit:
       'https://tuliooov.github.io/ignite-2022-reactjs-coffee-challenge-02-delivery/',
-    id: 0,
+    id: 2,
   },
   {
     title: 'Ignite Timer',
@@ -53,7 +64,7 @@ export const projects = [
       'https://github.com/tuliooov/Ignite-ReactJS-Desafio-01-Praticando-os-conceitos-do-ReactJS',
     visit:
       'https://tuliooov.github.io/Ignite-ReactJS-Desafio-01-Praticando-os-conceitos-do-ReactJS/',
-    id: 1,
+    id: 0,
   },
 ]
 
