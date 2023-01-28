@@ -14,7 +14,7 @@ export const Section = styled.section<SectionProps>`
   box-sizing: content-box;
   position: relative;
   overflow: hidden;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
@@ -59,6 +59,10 @@ export const SectionTitle = styled.h2`
   }
 `
 
+export const StrongTag = styled.strong`
+  font-weight: 700;
+`
+
 export const SectionText = styled.p`
   max-width: 800px;
   font-size: 24px;
@@ -88,8 +92,8 @@ export const SectionDivider = styled.div`
   border-radius: 10px;
   background-color: #fff;
   background: ${(props) => props.colorAlt ?
-    'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
-    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+    'linear-gradient(270deg, #F46737 0%, #c74545 100%)' :
+    'linear-gradient(270deg, #363636 0%, #c74545 100%)'};
 
     margin: ${(props) => props.divider ? "4rem 0" : ""};
 
@@ -123,7 +127,7 @@ export const SecondaryBtn = styled.button`
   }
 
   &:hover {
-    color: #0f1624;
+    color: #1c1c1c;
     background: #fff;
     border: 1px solid #fff;
   }
@@ -164,7 +168,7 @@ export const ButtonBack = styled.div`
   justify-content: center;
   margin: ${({ alt, form }) => (alt || form) ? '0' : '0 0 80px'};
   color: #fff;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)' : 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)'};
+  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #c73131 100%)' : 'linear-gradient(270deg, #282828 0%, #c73131 100%)'};
   cursor: pointer;
   transition: 0.5s ease;
   position: relative;
@@ -196,7 +200,7 @@ export const ButtonFront = styled.button`
   left: 0;
   width: 100%;
   height: 100%;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #c74545 100%)' : 'linear-gradient(270deg, #363636 0%, #c74545 100%)'};
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
   transition: .4s ease;
   font-size: ${({ alt }) => alt ? '20px' : '24px'};
@@ -218,7 +222,7 @@ export const ButtonFront = styled.button`
   }
 
   &:disabled{
-    background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
+    background: linear-gradient(270deg, #282828 0%, #c73131 100%);
     opacity: 0.5;
     box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
   }
@@ -240,7 +244,7 @@ export const LinkContainer = styled.div`
   padding: 8px;
 
   &:hover {
-    background-color: #212d45;
+    background-color: #272727;
     transform: scale(1.2);
     cursor: pointer;
   }

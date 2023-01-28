@@ -4,6 +4,7 @@ export const Img = styled.img`
   width:100%;
   height:100%;
   object-fit: cover;
+  border-radius: 10px 10px 0 0;
   overflow: hidden;
 `
 
@@ -38,8 +39,9 @@ export const TitleContent = styled.div`
   width: 100%;
   margin-top: 4rem;
   margin-bottom: 0.7em;
-  color: #9cc9e3;
+  color: #ff6b6b;
   font-size: 1.8rem;
+  font-weight: 500;
 
 `;
 
@@ -47,7 +49,7 @@ export const TitleContent = styled.div`
 export const HeaderThree = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;
-  color: #9cc9e3;
+  color: #ff6b6b;
   padding: .5rem 0;
   margin-top: 1rem;
   font-size: ${(props) => props.title ? '3rem' : '2rem'};
@@ -58,7 +60,7 @@ export const Hr = styled.hr`
   height: 3px;
   margin: 8px auto;
   border: 0;
-  background: #d0bb57;
+  background: #a3a3a3;
 `;
 
 export const Intro = styled.div`
@@ -99,21 +101,27 @@ export const ExternalLinks = styled.a`
 color:#d4c0c0;
 font-size: 1.6rem;
 padding:1rem 1.5rem;
-background: #6b3030;
+background: #c74545;
 border-radius: 15px;
 transition: 0.5s;
 &:hover{
-  background: #801414;
-
+  background: #c73131;
 }
 `;
 
 export const TagList = styled.ul`
-display: flex;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
 justify-content: space-around;
-padding: 2rem;
+align-items: center;
+gap: 2rem;
+row-gap: 1.5rem;
+padding: 3rem;
 `
+
 export const Tag = styled.li`
 color: #d8bfbf;
 font-size: 1.5rem;
+list-style-type: circle;
+text-align: left;
 `

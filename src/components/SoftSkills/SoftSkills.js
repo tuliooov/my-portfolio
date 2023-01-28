@@ -1,14 +1,14 @@
 import React from "react";
 import { Section, SectionDivider, SectionText, SectionTitle, } from "../../styles/GlobalComponents";
-import { List, ListContainer, ListItem, ListParagraph, ListTitle, } from "./TechnologiesStyles";
-import { Skills, OtherSkills } from './Skills'
+import { List, ListContainer, ListItem, ListParagraph, ListTitle, } from "./SoftSkillsStyles";
+import { Skills } from './constants'
 
-const Technologies = () => (
+const SoftSkills = () => (
   <Section id="skills">
     <SectionDivider divider />
-    <SectionTitle>Hard Skills</SectionTitle>
+    <SectionTitle>Soft Skills</SectionTitle>
     <SectionText>
-      I've worked with multiple technologies as a developer to develop & maintain my projects.
+      I work daily with my ethical, moral and professional skills. Always seek to improve these qualities
     </SectionText>
     <List>
       {Skills.map((Skill) => (
@@ -25,16 +25,7 @@ const Technologies = () => (
         </ListItem>
       ))}
     </List>
-    <List columns={12} onlyIcon>
-      {OtherSkills.map((Skill) => (
-        <ListItem key={Skill.slug} title={Skill.title}>
-          <picture>
-            <Skill.Component size="3rem" />
-          </picture>
-        </ListItem>
-      ))}
-    </List>
   </Section>
 );
 
-export default Technologies;
+export default SoftSkills;

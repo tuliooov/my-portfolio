@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiOutlineWhatsApp } from 'react-icons/ai';
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
 
 const Header = () => (
@@ -21,7 +21,7 @@ const Header = () => (
           <NavLink>Skills</NavLink>
         </Link>
       </li>
-      <li>
+      <li> 
         <Link href="#about">
           <NavLink>About</NavLink>
         </Link>
@@ -36,6 +36,9 @@ const Header = () => (
       </SocialIcons>
       <SocialIcons href="https://www.instagram.com/_marcovaleriano/">
         <AiFillInstagram size="3rem" />
+      </SocialIcons>
+      <SocialIcons href="https://wa.me/5537988031061/">
+        <AiOutlineWhatsApp size="3rem" />
       </SocialIcons>
     </Div3>
   </Container>
