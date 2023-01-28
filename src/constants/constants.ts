@@ -4,7 +4,7 @@ export const projects = [
     date: '2023-01-28',
     description:
       'Develop a desktop chat, which can be responsive. You can go further and add animations, or even implement a functional chat.',
-    image: './images/buttons-and-cursors.png',
+    image: './images/chat.png',
     tags: [
       'NextJS',
       'CSS Modules',
