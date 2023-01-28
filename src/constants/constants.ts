@@ -3,6 +3,25 @@ export const projects = [
     title: 'Buttons and Cursors',
     date: '2023-01-28',
     description:
+      'Develop a desktop chat, which can be responsive. You can go further and add animations, or even implement a functional chat.',
+    image: './images/buttons-and-cursors.png',
+    tags: [
+      'NextJS',
+      'CSS Modules',
+      'Typescript',
+      'Github Pages',
+      'ESLint',
+      'React Icons',
+      'Date Fns',
+    ],
+    source: 'https://github.com/tuliooov/one-chat-challenge-4-bora-codar',
+    visit: 'https://tuliooov.github.io/one-chat-challenge-4-bora-codar/',
+    id: 4,
+  },
+  {
+    title: 'Buttons and Cursors',
+    date: '2023-01-28',
+    description:
       'Each button variant follows an interface that dictates what a button within the application accepts to receive as a property.',
     image: './images/buttons-and-cursors.png',
     tags: ['Vite', 'CSS', 'Typescript', 'Github Pages'],
