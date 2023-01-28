@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
-export const Section = styled.section`
+interface SectionProps {
+  grid?: boolean
+  row?: boolean
+  nopadding?: boolean
+}
+export const Section = styled.section<SectionProps>`
   display: ${(props) => props.grid ? "grid" : "flex"};
   flex-direction: ${(props) => props.row ? "row" : "column"};
   padding: ${(props) => props.nopadding ? "0" : "32px 48px 0"} ;
@@ -96,24 +101,6 @@ export const SectionDivider = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 32px;
     height: 2px;
-  }
-`
-export const SectionSubText = styled.p`
-  max-width: 800px;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
-
-@media ${(props) => props.theme.breakpoints.md} {
-    max-width: 672px;
-    font-size: 16px;
-    line-height: 25px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 14px;
-    line-height: 22px;
   }
 `
 export const SecondaryBtn = styled.button`
