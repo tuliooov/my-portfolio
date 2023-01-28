@@ -106,6 +106,9 @@ export const ExternalLinks = styled.a`
 export const TagList = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-template-columns: 1fr 1fr;
+  }
   justify-content: space-around;
   align-items: center;
   gap: 2rem;

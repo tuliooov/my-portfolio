@@ -4,7 +4,7 @@ export const projects = [
     date: '2023-01-27',
     description:
       'During this challenge, we used slightly more advanced concepts developing a coffee ordering application from scratch!',
-    image: '/images/coffee-delivery.png',
+    image: './images/coffee-delivery.png',
     tags: [
       'Vite',
       'Styled Comp.',
@@ -27,7 +27,7 @@ export const projects = [
     date: '2023-01-25',
     description:
       'We built a complete application with routing and several important concepts of the React ecosystem.',
-    image: '/images/ignite-timer.png',
+    image: './images/ignite-timer.png',
     tags: [
       'Vite',
       'Styled Comp.',
@@ -47,7 +47,7 @@ export const projects = [
     title: 'ToDo List',
     date: '2023-01-06',
     description: 'We reinforce the most important concepts of ReactJS.',
-    image: '/images/to-do-list.png',
+    image: './images/to-do-list.png',
     tags: ['Vite', 'Typescript', 'Local Storage', 'Github Pages'],
     source:
       'https://github.com/tuliooov/Ignite-ReactJS-Desafio-01-Praticando-os-conceitos-do-ReactJS',

@@ -36,36 +36,36 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
-          <meta name="title" content="Vipul Jha - Android & Flutter Dev" />
+          <meta name="title" content="Marco Túlio - Fullstack Developer" />
           <meta
             name="description"
-            content="Hey there, This is Vipul Jha aka lordarcadius. I am an Android & Flutter developer who also works on ROMs, Kernels, & Scripts."
+            content="I am currently twenty-five years old and live in the city of Divinópolis in the state of Minas Gerais - Brazil. I work as a full stack developer at Banco Inter. I am communicative, competitive, optimistic and helpful. In addition, I have learned to work as a team. My motto is"
           />
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content="Vipul Jha - Android & Flutter Dev"
+            content="Marco Túlio - Fullstack Developer"
           />
           <meta
             property="og:description"
-            content="Hey there, This is Vipul Jha aka lordarcadius. I am an Android & Flutter developer who also works on ROMs, Kernels, & Scripts."
+            content="I am currently twenty-five years old and live in the city of Divinópolis in the state of Minas Gerais - Brazil. I work as a full stack developer at Banco Inter. I am communicative, competitive, optimistic and helpful. In addition, I have learned to work as a team. My motto is"
           />
           <meta
             property="og:image"
-            content="https://www.vipuljha.com/images/banner.png"
+            content="https://tuliooov.github.io/my-portfolio/profile.jpeg"
           />
           <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:title"
-            content="Vipul Jha - Android & Flutter Dev"
+            content="Marco Túlio - Fullstack Developer"
           />
           <meta
             property="twitter:description"
-            content="Hey there, This is Vipul Jha aka lordarcadius. I am an Android & Flutter developer who also works on ROMs, Kernels, & Scripts."
+            content="I am currently twenty-five years old and live in the city of Divinópolis in the state of Minas Gerais - Brazil. I work as a full stack developer at Banco Inter. I am communicative, competitive, optimistic and helpful. In addition, I have learned to work as a team. My motto is"
           />
           <meta
             property="twitter:image"
-            content="https://www.vipuljha.com/images/banner.png"
+            content="https://tuliooov.github.io/my-portfolio/profile.jpeg"
           />
         </Head>
         <body>

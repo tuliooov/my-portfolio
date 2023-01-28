@@ -165,7 +165,7 @@ export const SecondaryBtn = styled.button`
   }
 `
 
-export const ButtonBack = styled.div<{
+export const ButtonBack = styled.a<{
   alt?: boolean
   form?: boolean
   disabled?: boolean

@@ -19,33 +19,36 @@ const Header = () => (
   <Container>
     <Div1>
       <Link
-        href="/"
+        href="./my-portfolio"
         style={{ display: 'flex', alignItems: 'center', color: 'white' }}
       >
         <img
-          src="/profile.jpeg"
+          src="./profile.jpeg"
           height={40}
           width={40}
           style={{ borderRadius: '100%' }}
+          alt="Photo marco tulio"
         />{' '}
-        <span style={{ marginLeft: 10, marginTop: 7, fontSize: 20 }}>
+        <span
+          style={{ marginLeft: 10, marginTop: 7, fontSize: 20, width: '120px' }}
+        >
           Marco Túlio
         </span>
       </Link>
     </Div1>
     <Div2>
       <li>
-        <Link href="#projects">
+        <Link href="./my-portfolio#projects">
           <NavLink>Projects</NavLink>
         </Link>
       </li>
       <li>
-        <Link href="#skills">
+        <Link href="./my-portfolio#skills">
           <NavLink>Skills</NavLink>
         </Link>
       </li>
       <li>
-        <Link href="#about">
+        <Link href="./my-portfolio#about">
           <NavLink>About</NavLink>
         </Link>
       </li>

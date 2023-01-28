@@ -11,7 +11,7 @@ export default function App({
   return (
     <>
       <Head>
-        <title>Vipul Jha - Android & Flutter Dev</title>
+        <title>Marco Túlio - Fullstack Developer</title>
       </Head>
       <Theme>
         <Component {...pageProps} />
