@@ -108,23 +108,24 @@ export const projects = [
 ]
 
 export const TimeLineData = [
-  { year: 2013, text: 'Graduated from elementary school.' },
-  {
-    year: 2015,
-    text: 'Started studying HTML, CSS and JS in the PRONATEC course.',
-  },
-  { year: 2016, text: 'Completed high school.' },
-  { year: 2016, text: 'My first job, in a Casa Art Festas online store.' },
-  { year: 2017, text: 'Started my job at Cliente Fiel.' },
-  { year: 2018, text: 'Developed tools for the company MV Tecidos.' },
+  { year: 2024, text: 'I hope to return and finish my graduation.' },
+  { year: 2023, text: 'I will carry out my first exchange for studies.' },
+  { year: 2022, text: 'Discovered the importance of speaking English.' },
+  { year: 2021, text: 'Got an amazing job at Banco Inter.' },
+  { year: 2020, text: 'Developed several incredible tools for Cliente Fiel.' },
+  { year: 2020, text: 'Started my degree in Computer Science at PUC - Minas.' },
   {
     year: 2019,
     text: 'Started studying at RocketSeat, where I study until today.',
   },
-  { year: 2020, text: 'Started my degree in Computer Science at PUC - Minas.' },
-  { year: 2020, text: 'Developed several incredible tools for Cliente Fiel.' },
-  { year: 2021, text: 'Got an amazing job at Banco Inter.' },
-  { year: 2022, text: 'Discovered the importance of speaking English.' },
-  { year: 2023, text: 'I will carry out my first exchange for studies.' },
-  { year: 2024, text: 'I hope to return and finish my graduation.' },
+  { year: 2018, text: 'Developed tools for the company MV Tecidos.' },
+  { year: 2017, text: 'Started my job at Cliente Fiel.' },
+  { year: 2016, text: 'My first job, in a Casa Art Festas online store.' },
+
+  { year: 2016, text: 'Completed high school.' },
+  {
+    year: 2015,
+    text: 'Started studying HTML, CSS and JS in the PRONATEC course.',
+  },
+  { year: 2013, text: 'Graduated from elementary school.' },
 ]

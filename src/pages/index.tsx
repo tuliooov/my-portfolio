@@ -7,6 +7,7 @@ import SoftSkills from '../components/SoftSkills/SoftSkills'
 import Timeline from '../components/TimeLine/TimeLine'
 import { Layout } from '../layout/Layout'
 import { Section } from '../styles/GlobalComponents'
+import Languages from '@/components/Languages/Languages'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Hero />
         <BgAnimation />
       </Section>
+      <Languages />
       <Projects />
       <Technologies />
       <SoftSkills />

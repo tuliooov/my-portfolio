@@ -8,7 +8,8 @@ export const Img = styled.img`
   overflow: hidden;
 `
 
-export const GridContainer = styled.section`
+export const GridContainer = styled.ul`
+  cursor: pointer;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   padding-top: 3rem;
@@ -16,6 +17,7 @@ export const GridContainer = styled.section`
   place-items: center;
   column-gap: 1rem;
   row-gap: 3rem;
+  align-items: start;
   @media ${(props) => props.theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
@@ -23,7 +25,8 @@ export const GridContainer = styled.section`
     padding-bottom: 1.5rem;
   }
 `
-export const BlogCard = styled.div`
+export const BlogCard = styled.li`
+  overflow: hidden;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;

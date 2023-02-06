@@ -32,6 +32,19 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
+
+  .accordion {
+    list-style: none;
+  }
+
+
+  .answer_wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.2s;
+  }
+
+
 `
 
 export default GlobalStyles

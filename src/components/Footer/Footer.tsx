@@ -25,7 +25,7 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Chat</LinkTitle>
-          <LinkItem href="https://wa.me/5537988031061">Whatsapp</LinkItem>
+          <LinkItem href="https://wa.me/5537988031061">+5537988031061</LinkItem>
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
