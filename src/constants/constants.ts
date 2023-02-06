@@ -1,5 +1,25 @@
 export const projects = [
   {
+    title: 'DT Money 2.0',
+    date: '2023-02-06',
+    description:
+      'Vimos como performar aplicações com o React entendendo como funcionam os algoritmos internos da biblioteca e todo fluxo de renderização de componentes.',
+    image: './images/dt-money.png',
+    tags: [
+      'ViteJS',
+      'Style Components',
+      'Typescript',
+      'Github Pages',
+      'JSON-server',
+      'Radix UI',
+      'Use-context-selector',
+      'React-Hook-Forms',
+    ],
+    source: 'https://github.com/tuliooov/ignite-2022-project-2-dt-money',
+    visit: 'https://tuliooov.github.io/ignite-2022-project-2-dt-money/',
+    id: 5,
+  },
+  {
     title: 'Chat',
     date: '2023-01-28',
     description:
