@@ -1,5 +1,22 @@
 export const projects = [
   {
+    title: 'Calculator #BoraCoda',
+    date: '2023-02-09',
+    description: 'Develop a desktop calculator, which can be responsive.',
+    image: './images/calculator-05.png',
+    tags: [
+      'NextJS',
+      'Style Components',
+      'Typescript',
+      'Github Pages',
+      'ESlint',
+      'Color Scheme CSS',
+    ],
+    source: 'https://github.com/tuliooov/calculator-challenge-5-bora-codar',
+    visit: 'https://tuliooov.github.io/calculator-challenge-5-bora-codar/',
+    id: 6,
+  },
+  {
     title: 'DT Money 2.0',
     date: '2023-02-06',
     description:

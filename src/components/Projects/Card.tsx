@@ -27,9 +27,9 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  const [active, setActive] = useState(false)
-  const contentEl = useRef()
-  const onToggle = () => setActive(!active)
+  const [active, setActive] = useState(true)
+  const contentEl = useRef<HTMLDivElement>(null)
+  const onToggle = () => setActive((open) => !open)
 
   return (
     <BlogCard className={`accordion_item ${active ? 'active' : ''}`}>
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         className="answer_wrapper"
         style={
           active
-            ? { height: contentEl.current.scrollHeight }
+            ? { height: contentEl?.current?.scrollHeight }
             : { height: '0px' }
         }
       >
