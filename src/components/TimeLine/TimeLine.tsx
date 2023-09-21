@@ -66,7 +66,7 @@ const Timeline = () => {
   }, [])
 
   return (
-    <Section id="about">
+    <Section>
       <SectionDivider divider />
       <SectionTitle>My Journey</SectionTitle>
       <SectionText>

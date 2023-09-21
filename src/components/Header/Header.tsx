@@ -23,9 +23,7 @@ const Header = () => (
         style={{ display: 'flex', alignItems: 'center', color: 'white' }}
       >
         <img
-          src="./profile.png"
-          // src="./profile.jpeg"
-          // src="./profile.HEIC"
+          src="./profile.jpeg"
           height={40}
           width={40}
           style={{ borderRadius: '100%' }}
@@ -40,13 +38,13 @@ const Header = () => (
     </Div1>
     <Div2>
       <li>
-        <Link href="./my-portfolio#skills">
-          <NavLink>Skills</NavLink>
+        <Link href="./my-portfolio#about">
+          <NavLink>About</NavLink>
         </Link>
       </li>
       <li>
-        <Link href="./my-portfolio#about">
-          <NavLink>About</NavLink>
+        <Link href="./my-portfolio#skills">
+          <NavLink>Skills</NavLink>
         </Link>
       </li>
       <li>

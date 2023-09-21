@@ -39,16 +39,17 @@ export default class MyDocument extends Document {
           <meta name="title" content="Marco Túlio - Fullstack Developer" />
           <meta
             name="description"
-            content="I am currently twenty-five years old and live in the city of Divinópolis in the state of Minas Gerais - Brazil. I work as a full stack developer at Banco Inter. I am communicative, competitive, optimistic and helpful. In addition, I have learned to work as a team. My motto is"
+            content="I'm a passionate software developer with a strong track record in creating efficient software solutions."
           />
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
             content="Marco Túlio - Fullstack Developer"
           />
+          <link rel='icon' type='image/png' href='https://tuliooov.github.io/my-portfolio/profile.jpeg' />
           <meta
             property="og:description"
-            content="I am currently twenty-five years old and live in the city of Divinópolis in the state of Minas Gerais - Brazil. I work as a full stack developer at Banco Inter. I am communicative, competitive, optimistic and helpful. In addition, I have learned to work as a team. My motto is"
+            content="I'm a passionate software developer with a strong track record in creating efficient software solutions."
           />
           <meta
             property="og:image"
@@ -61,7 +62,7 @@ export default class MyDocument extends Document {
           />
           <meta
             property="twitter:description"
-            content="I am currently twenty-five years old and live in the city of Divinópolis in the state of Minas Gerais - Brazil. I work as a full stack developer at Banco Inter. I am communicative, competitive, optimistic and helpful. In addition, I have learned to work as a team. My motto is"
+            content="I'm a passionate software developer with a strong track record in creating efficient software solutions."
           />
           <meta
             property="twitter:image"

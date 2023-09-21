@@ -11,7 +11,7 @@ import { LeftSection } from "./HeroStyles";
 
 const Hero = () => (
   <>
-    <Section row nopadding>
+    <Section row nopadding id="about">
       <LeftSection>
         <SectionTitle main center>
           Hello, my name is Marco Túlio
