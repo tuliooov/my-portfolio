@@ -19,7 +19,7 @@ const Technologies = () => (
     <SectionDivider divider />
     <SectionTitle>Hard Skills</SectionTitle>
     <SectionText>
-      I`ve worked with multiple technologies as a developer to develop &
+      I've worked with multiple technologies as a developer to develop &
       maintain my projects.
     </SectionText>
     <List>

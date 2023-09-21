@@ -1,4 +1,7 @@
-import React, { useRef, useState } from 'react'
+import Link from 'next/link'
+import React from 'react'
+import { AiFillGithub } from 'react-icons/ai'
+import { GrCertificate } from 'react-icons/gr'
 
 import {
   BlogCard,
@@ -8,62 +11,39 @@ import {
   Hr,
   Tag,
   TagList,
-  TitleContent,
   UtilityList,
   Img,
+  Boxes,
+  Box,
+  BoxText,
+  Topics,
+  Card,
+  BoxDescription,
 } from './ProjectsStyles'
+import { IProject } from './type'
 
 interface ProjectCardProps {
-  project: {
-    title: string
-    date: string
-    description: string
-    image: string
-    tags: string[]
-    source: string
-    visit: string
-    id: number
-  }
+  project: IProject
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  const [active, setActive] = useState(false)
-  const contentEl = useRef<HTMLDivElement>(null)
-  const onToggle = () => setActive((open) => !open)
-
   return (
-    <BlogCard className={`accordion_item ${active ? 'active' : ''}`}>
-      <Img src={project.image || '/images/empty.png'} onClick={onToggle} />
-      <div
-        ref={contentEl}
-        className="answer_wrapper"
-        style={
-          active
-            ? { height: contentEl?.current?.scrollHeight }
-            : { height: '0px' }
-        }
-      >
-        <div className="answer">
-          <HeaderThree title={project.title}>{project.title}</HeaderThree>
-          <Hr />
-          <CardInfo className="card-info">{project.description}</CardInfo>
-          <div>
-            <TitleContent>Tech Stack</TitleContent>
-            <Hr />
-            <TagList>
-              {project.tags.map((t, i) => {
-                return <Tag key={i}>{t}</Tag>
-              })}
-            </TagList>
-          </div>
-          <UtilityList>
-            <ExternalLinks href={project.visit}>Live Preview</ExternalLinks>
-            <ExternalLinks href={project.source}>Source Code</ExternalLinks>
-          </UtilityList>
-        </div>
-      </div>
-    </BlogCard>
-  )
+    <>
+      <Link key={project.id} href={project.html_url} target="_blank">
+        <Card>
+          <Box>
+            <AiFillGithub />
+            <BoxText>
+              {project.name.replace(/-/g, ' ')}
+            </BoxText>
+          </Box>
+          <BoxDescription>
+            {project.description}
+          </BoxDescription>
+          {/* <Topics>{[...project.topics].map((tag) => <div>{tag}</div>)}</Topics> */}
+        </Card>
+      </Link>
+    </>)
 }
 
 export default ProjectCard

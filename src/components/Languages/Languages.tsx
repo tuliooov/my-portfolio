@@ -19,7 +19,7 @@ const LanguagesPage = () => (
     <SectionDivider divider />
     <SectionTitle>Languages</SectionTitle>
     <SectionText>
-      Currently, I practice the study of the English language daily
+      Currently, I'm practicing the study of the English language daily
     </SectionText>
     <List>
       {Languages.map((Skill) => (

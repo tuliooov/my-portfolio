@@ -11,22 +11,22 @@ import Link from 'next/link'
 
 const data = [
   {
-    text: 'Complete the PRONATEC course.',
+    text: 'I graduated from my IT technical course',
     Component: GrCertificate,
     href: 'https://www.google.com/search?rlz=1C5GCEM_enBR1025BR1027&sxsrf=AJOqlzUg4aEbYkgLy0NxJBOEwIXlD61kGA:1674879300118&q=escola+santo+tom%C3%A1s+de+aquino+divinopolis&spell=1&sa=X&ved=2ahUKEwj9mebNs-n8AhXHOrkGHZkpAVIQBSgAegQICRAB&biw=1440&bih=694&dpr=2',
   },
   {
-    text: 'Working at Banco Inter',
+    text: 'Working at a brilliant Brazilian bank',
     Component: GrWorkshop,
     href: 'https://www.bancointer.com.br/',
   },
   {
-    text: 'Formed Specialist in ReactJS',
+    text: 'I specialized in ReactJS',
     Component: GrCertificate,
     href: 'https://www.rocketseat.com.br/',
   },
   {
-    text: "Enrolled in Calgary's Bayswater",
+    text: "I graduated in English from a school in Canada",
     Component: GrMap,
     href: 'https://www.bayswater.ac/destination/calgary',
   },

@@ -1,21 +1,20 @@
-import { DiReact, DiNodejs, DiMysql } from 'react-icons/di'
+import { TbBrandNextjs } from 'react-icons/tb'
+import { AiOutlineCloudServer } from 'react-icons/ai'
+import { BsDatabaseCheck } from 'react-icons/bs'
+import { DiReact, DiMysql, DiNodejs } from 'react-icons/di'
 import {
-  SiJava,
   SiFirebase,
   SiGit,
-  SiFlutter,
   SiPostgresql,
   SiPostman,
   SiDocker,
   SiAmazonaws,
-  SiAdobe,
-  SiMicrosoft,
   SiMongodb,
-  SiPython,
-  SiGo,
-  SiC,
   SiGitlab,
+  SiGithub,
+  SiPrisma,
 } from 'react-icons/si'
+import { FaJava } from 'react-icons/fa'
 
 export const Skills = [
   {
@@ -25,23 +24,23 @@ export const Skills = [
     Description: () => <>I work creating microfrontends with Nextjs and Vite</>,
   },
   {
-    slug: 'java',
-    Component: SiJava,
-    title: 'Java',
-    Description: () => <>I can code in Java. But I mostly use it for CRUDs</>,
-  },
-  {
     slug: 'node',
     Component: DiNodejs,
     title: 'NodeJS',
     Description: () => (
-      <>I`ve written dozens of Rest APIs in NodeJS for various purposes.</>
+      <>I've written dozens of Rest APIs in NodeJS for various purposes.</>
     ),
   },
   {
-    slug: 'mysql',
-    Component: DiMysql,
-    title: 'Mysql',
+    slug: 'java',
+    Component: FaJava,
+    title: 'Java',
+    Description: () => <>I can code in Java. But I mostly use it for CRUDs</>,
+  },
+  {
+    slug: 'database',
+    Component: BsDatabaseCheck,
+    title: 'DataBase',
     Description: () => (
       <>
         I have already developed database tables and hundreds of commands for
@@ -50,12 +49,12 @@ export const Skills = [
     ),
   },
   {
-    slug: 'firebase',
-    Component: SiFirebase,
-    title: 'Firebase',
+    slug: 'clound',
+    Component: AiOutlineCloudServer,
+    title: 'Clound',
     Description: () => (
       <>
-        I have used Firebase for auth, hosting, database & analytics in my apps.
+        I used cloud services for authentication, hosting, database and analytics in my applications on Azure, Aws and Firebase.
       </>
     ),
   },
@@ -71,9 +70,9 @@ export const Skills = [
 
 export const OtherSkills = [
   {
-    slug: 'flutter',
-    Component: SiFlutter,
-    title: 'Flutter',
+    slug: 'nextjs',
+    Component: TbBrandNextjs,
+    title: 'NextJS',
   },
   {
     slug: 'docker',
@@ -86,6 +85,11 @@ export const OtherSkills = [
     title: 'AWS',
   },
   {
+    slug: 'firebase',
+    Component: SiFirebase,
+    title: 'Firebase',
+  },
+  {
     slug: 'postgresql',
     Component: SiPostgresql,
     title: 'PostgreSQL',
@@ -96,38 +100,28 @@ export const OtherSkills = [
     title: 'Postman',
   },
   {
-    slug: 'adobe',
-    Component: SiAdobe,
-    title: 'Adobe',
-  },
-  {
-    slug: 'microsoft',
-    Component: SiMicrosoft,
-    title: 'Microsoft',
-  },
-  {
     slug: 'mongodb',
     Component: SiMongodb,
     title: 'MongoDB',
   },
   {
-    slug: 'c',
-    Component: SiC,
-    title: 'C & C++',
-  },
-  {
-    slug: 'python',
-    Component: SiPython,
-    title: 'Python',
-  },
-  {
-    slug: 'go',
-    Component: SiGo,
-    title: 'GO',
+    slug: 'mysql',
+    Component: DiMysql,
+    title: 'MySQL',
   },
   {
     slug: 'gitlab',
     Component: SiGitlab,
     title: 'Gitlab',
+  },
+  {
+    slug: 'github',
+    Component: SiGithub,
+    title: 'Github',
+  },
+  {
+    slug: 'prisma',
+    Component: SiPrisma,
+    title: 'Prisma',
   },
 ]

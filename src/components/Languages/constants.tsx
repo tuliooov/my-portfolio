@@ -5,7 +5,7 @@ export const Languages = [
     slug: 'english',
     Component: MdOutlineLanguage,
     title: 'English',
-    Description: () => <>Intermediate level 1</>,
+    Description: () => <>Intermediate</>,
   },
   {
     slug: 'portuguese',

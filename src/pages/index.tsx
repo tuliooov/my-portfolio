@@ -17,11 +17,11 @@ const Home = () => {
         <BgAnimation />
       </Section>
       <Languages />
-      <Projects />
       <Technologies />
       <SoftSkills />
       <Timeline />
       <Acomplishments />
+      <Projects />
     </Layout>
   )
 }

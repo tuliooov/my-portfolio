@@ -1,4 +1,7 @@
 import {
+  RiStarSmileLine
+} from 'react-icons/ri'
+import {
   GrAccessibility,
   GrAnnounce,
   GrAlarm,
@@ -35,7 +38,7 @@ export const Skills = [
   },
   {
     slug: 'optimistic',
-    Component: GrYoga,
+    Component: RiStarSmileLine,
     title: 'Optimistic',
     Description: () => (
       <>Dealing with challenges such as: doing what has to be done.</>

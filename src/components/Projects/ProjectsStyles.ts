@@ -35,17 +35,6 @@ export const BlogCard = styled.li`
     width: 100%;
   }
 `
-export const TitleContent = styled.div`
-  text-align: center;
-  z-index: 20;
-  width: 100%;
-  margin-top: 4rem;
-  margin-bottom: 0.7em;
-  color: #ff6b6b;
-  font-size: 1.8rem;
-  font-weight: 500;
-`
-
 export const HeaderThree = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;
@@ -124,4 +113,145 @@ export const Tag = styled.li`
   font-size: 1.5rem;
   list-style-type: circle;
   text-align: left;
+`
+
+
+export const Boxes = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  margin: 24px 0 40px;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    gap: 16px;
+    margin: 20px 0 32px;
+  grid-template-columns: repeat(1, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: grid;
+  grid-template-columns: repeat(1, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 10px;
+    max-width: 500px;
+    margin: 24px auto;
+  }
+`
+
+export const Card = styled.div`
+  background: #272727;
+  border-radius: 12px;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  svg {
+    path {
+      fill: #ffc500;
+    }
+  }
+
+  transition: transform 0.2s;
+  transition: opacity 0.1s;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    /* height: 210px; */
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    /* height: 135px; */
+    padding: 16px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    /* height: 110px; */
+    padding: 12px;
+
+    &:nth-child(2n) {
+      grid-row: 2;
+    }
+  }
+`
+
+export const Box = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+`
+
+export const Topics = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 80px));
+  gap: 1rem;
+  > div {
+    padding: 2px 8px;
+    text-align: center;
+    background: #1c1c1c;
+    border-radius: 12px;
+  }
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
+  @media ${(props) => props.theme.breakpoints.md} {
+    justify-content: center;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    justify-content: center;
+  }
+`
+
+export const BoxText = styled.p`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 14px;
+    line-height: 14px;
+  }
+`
+
+export const BoxDescription = styled.p`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.5);
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 14px;
+    line-height: 14px;
+  }
 `
