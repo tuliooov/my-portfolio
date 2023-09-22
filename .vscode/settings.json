@@ -1,4 +1,8 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": false,
+  },
+  "editor.formatOnSave": false,
+  "eslint.format.enable": true,
 }

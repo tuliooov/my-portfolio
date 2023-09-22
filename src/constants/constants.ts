@@ -8,23 +8,6 @@ enum TagOrigemEnum {
   NLW = 'NextLevelWeek',
 }
 
-enum TagServer {
-  GITHUB_PAGES = 'Github Pages',
-  VERCEL = 'Vercel',
-}
-
-enum TagHardSkill {
-  REACT = 'React',
-  NEXT = 'NextJS',
-  NODE = 'NodeJS',
-  TYPESCRIPT = 'Typescript',
-  ESLINT = 'ESLint',
-  PRETTIER = 'Prettier',
-  JEST = 'Jest',
-  VITE = 'Vite',
-  STYLED_COMPONENTS = 'Styled Components',
-}
-
 export const projects = [
   {
     title: 'IG News',
@@ -391,8 +374,14 @@ export const projects = [
 ]
 
 export const TimeLineData = [
-  { year: 2024, text: 'I will specialize in Artificial Intelligence at RocketSeat.' },
-  { year: 2023, text: 'I graduated in English from Bayswater School in Calgary, Canada.' },
+  {
+    year: 2024,
+    text: 'I will specialize in Artificial Intelligence at RocketSeat.',
+  },
+  {
+    year: 2023,
+    text: 'I graduated in English from Bayswater School in Calgary, Canada.',
+  },
   { year: 2022, text: 'I specialized in ReactJS at RocketSeat.' },
   { year: 2021, text: 'Got an amazing job at Banco Inter.' },
   { year: 2020, text: 'Developed several incredible tools for Cliente Fiel.' },
@@ -404,7 +393,10 @@ export const TimeLineData = [
   { year: 2018, text: 'Developed tools for the company MV Tecidos.' },
   { year: 2017, text: 'Started my job at Cliente Fiel.' },
   { year: 2016, text: 'My first job, in a Casa Art Festas online store.' },
-  { year: 2016, text: 'I completed high school and graduated from the IT technical course.' },
+  {
+    year: 2016,
+    text: 'I completed high school and graduated from the IT technical course.',
+  },
   {
     year: 2015,
     text: 'Started studying HTML, CSS and JS in the PRONATEC course.',

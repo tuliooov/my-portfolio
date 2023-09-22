@@ -54,7 +54,8 @@ export const Skills = [
     title: 'Clound',
     Description: () => (
       <>
-        I used cloud services for authentication, hosting, database and analytics in my applications on Azure, Aws and Firebase.
+        I used cloud services for authentication, hosting, database and
+        analytics in my applications on Azure, Aws and Firebase.
       </>
     ),
   },

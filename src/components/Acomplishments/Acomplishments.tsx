@@ -1,5 +1,3 @@
-import React from 'react'
-
 import {
   Section,
   SectionDivider,
@@ -26,7 +24,7 @@ const data = [
     href: 'https://www.rocketseat.com.br/',
   },
   {
-    text: "I graduated in English from a school in Canada",
+    text: 'I graduated in English from a school in Canada',
     Component: GrMap,
     href: 'https://www.bayswater.ac/destination/calgary',
   },

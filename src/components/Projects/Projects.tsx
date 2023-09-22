@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-import { Boxes, GridContainer } from './ProjectsStyles'
+import { Boxes } from './ProjectsStyles'
 import {
   Section,
   SectionDivider,
   SectionTitle,
 } from '../../styles/GlobalComponents'
-// import { projects } from '../../constants/constants'
 import ProjectCard from './Card'
 import { IProject } from './type'
 
@@ -17,21 +16,22 @@ const Projects = () => {
     const requestOptions = {
       method: 'GET',
       headers: new Headers({
-        'Accept': 'application/vnd.github+json',
-        // 'Authorization': `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+        Accept: 'application/vnd.github+json',
         'X-GitHub-Api-Version': '2022-11-28',
       }),
-    };
+    }
 
-    fetch('https://api.github.com/users/tuliooov/repos?sort=created', requestOptions)
-      .then(response => response.json())
-      .then(data => {
+    fetch(
+      'https://api.github.com/users/tuliooov/repos?sort=created',
+      requestOptions,
+    )
+      .then((response) => response.json())
+      .then((data) => {
         setProjects(data as IProject[])
       })
-      .catch(error => {
-        console.error(error);
-      });
-
+      .catch((error) => {
+        console.error(error)
+      })
   }
 
   useEffect(() => {
@@ -41,11 +41,11 @@ const Projects = () => {
   return (
     <Section id="projects">
       <SectionTitle main>Projects</SectionTitle>
-        <Boxes>
-          {projects.map((p, i) => {
-            return <ProjectCard key={i} project={p} />
-          })}
-        </Boxes>
+      <Boxes>
+        {projects.map((p, i) => {
+          return <ProjectCard key={i} project={p} />
+        })}
+      </Boxes>
       <SectionDivider />
     </Section>
   )

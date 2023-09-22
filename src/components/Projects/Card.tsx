@@ -1,25 +1,7 @@
 import Link from 'next/link'
-import React from 'react'
 import { AiFillGithub } from 'react-icons/ai'
-import { GrCertificate } from 'react-icons/gr'
 
-import {
-  BlogCard,
-  CardInfo,
-  ExternalLinks,
-  HeaderThree,
-  Hr,
-  Tag,
-  TagList,
-  UtilityList,
-  Img,
-  Boxes,
-  Box,
-  BoxText,
-  Topics,
-  Card,
-  BoxDescription,
-} from './ProjectsStyles'
+import { Box, BoxText, Card, BoxDescription } from './ProjectsStyles'
 import { IProject } from './type'
 
 interface ProjectCardProps {
@@ -33,17 +15,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <Card>
           <Box>
             <AiFillGithub />
-            <BoxText>
-              {project.name.replace(/-/g, ' ')}
-            </BoxText>
+            <BoxText>{project.name.replace(/-/g, ' ')}</BoxText>
           </Box>
-          <BoxDescription>
-            {project.description}
-          </BoxDescription>
+          <BoxDescription>{project.description}</BoxDescription>
           {/* <Topics>{[...project.topics].map((tag) => <div>{tag}</div>)}</Topics> */}
         </Card>
       </Link>
-    </>)
+    </>
+  )
 }
 
 export default ProjectCard

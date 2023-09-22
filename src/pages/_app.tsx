@@ -6,7 +6,7 @@ export default function App({
   pageProps,
 }: {
   Component: any
-  pageProps: any
+  pageProps: Record<string, unknown>
 }) {
   return (
     <>

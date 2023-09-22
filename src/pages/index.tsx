@@ -8,6 +8,7 @@ import Timeline from '../components/TimeLine/TimeLine'
 import { Layout } from '../layout/Layout'
 import { Section } from '../styles/GlobalComponents'
 import Languages from '@/components/Languages/Languages'
+import Certificates from '@/components/Certificates/Certificates'
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <Timeline />
       <Acomplishments />
       <Projects />
+      <Certificates />
     </Layout>
   )
 }

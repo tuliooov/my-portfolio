@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App: any) => (props: any) =>
+          enhanceApp: (App: any) => (props: Record<string, unknown>) =>
             sheet.collectStyles(<App {...props} />),
         })
 
@@ -46,7 +46,11 @@ export default class MyDocument extends Document {
             property="og:title"
             content="Marco Túlio - Fullstack Developer"
           />
-          <link rel='icon' type='image/png' href='https://tuliooov.github.io/my-portfolio/profile.jpeg' />
+          <link
+            rel="icon"
+            type="image/png"
+            href="https://tuliooov.github.io/my-portfolio/profile.jpeg"
+          />
           <meta
             property="og:description"
             content="I'm a passionate software developer with a strong track record in creating efficient software solutions."

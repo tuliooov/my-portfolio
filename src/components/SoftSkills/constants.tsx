@@ -1,6 +1,4 @@
-import {
-  RiStarSmileLine
-} from 'react-icons/ri'
+import { RiStarSmileLine } from 'react-icons/ri'
 import {
   GrAccessibility,
   GrAnnounce,

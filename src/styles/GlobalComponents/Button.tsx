@@ -3,7 +3,7 @@ import React from 'react'
 import { ButtonBack, ButtonFront } from './index'
 
 interface ButtonProps {
-  children: any
+  children: JSX.Element | string
   href: string
   alt?: boolean
   form?: boolean
