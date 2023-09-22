@@ -1,9 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: '/my-portfolio',
-  experimental: {
-    // appDir: true,
-  },
-}
+const repo = 'my-portfolio'
+const assetPrefix = `/${repo}/`
+const basePath = `/${repo}`
 
-module.exports = nextConfig
+module.exports = {
+  assetPrefix: assetPrefix,
+  basePath: basePath,
+}
