@@ -19,7 +19,7 @@ const Projects = () => {
       method: 'GET',
       headers: new Headers({
         'Accept': 'application/vnd.github+json',
-        'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
         'X-GitHub-Api-Version': '2022-11-28',
       }),
     };
