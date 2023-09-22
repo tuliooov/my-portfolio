@@ -17,7 +17,7 @@ const Certificates = () => {
   const [certificates] = useState<ICertificate[]>(certificatesMock)
 
   const slideImages = certificates.map((certificate) => ({
-    url: `/certificate/${certificate.fileName}`,
+    url: `./certificate/${certificate.fileName}`,
     caption: certificate.name,
   }))
 
