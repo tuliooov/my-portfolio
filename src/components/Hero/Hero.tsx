@@ -62,7 +62,9 @@ const Hero = () => (
           forward to making new connections for growth and success in the field
           of software development.
         </SectionText>
-        <Button href="https://drive.google.com/file/d/1PGWRP5AwynKhKLBUEb_S_21g1kr8h_oi/view">My Resume</Button>
+        <Button href="https://drive.google.com/file/d/1PGWRP5AwynKhKLBUEb_S_21g1kr8h_oi/view">
+          My Resume
+        </Button>
       </LeftSection>
     </Section>
   </>
