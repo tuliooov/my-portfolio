@@ -2,6 +2,12 @@ import { ICertificate } from './type'
 
 export const certificatesMock: ICertificate[] = [
   {
+    
+    name: 'Certificate Course Java 2023',
+    fileName: 'course-java-2023-en.png',
+    url: 'https://app.rocketseat.com.br/certificates/359f7f58-f833-4348-8011-a13ba10c4c5f',
+  },
+  {
     name: 'Certificate Ignite ReactJS 2022',
     fileName: 'ignite-reactjs-2022-en.png',
     url: 'https://app.rocketseat.com.br/certificates/1429caad-85eb-4a71-bf0a-8385c6111ce2',
