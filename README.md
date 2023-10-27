@@ -19,6 +19,7 @@
 
 
 ## Next Blog posts
+  - [ ] Creating a BLOG with Prismic CMS in my portfolio in NextJS
   - [ ] Github API for portfolio
   - [ ] ModuleFederation for microfrontend
   - [ ] Update all dependencies to latest
