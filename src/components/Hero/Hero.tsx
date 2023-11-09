@@ -7,7 +7,7 @@ import {
   StrongTag,
 } from '../../styles/GlobalComponents'
 import Button from '../../styles/GlobalComponents/Button'
-import { LeftSection } from './HeroStyles'
+import { ButtonContainer, LeftSection } from './HeroStyles'
 
 const Hero = () => (
   <>
@@ -62,9 +62,14 @@ const Hero = () => (
           forward to making new connections for growth and success in the field
           of software development.
         </SectionText>
-        <Button href="https://drive.google.com/file/d/1PGWRP5AwynKhKLBUEb_S_21g1kr8h_oi/view">
-          My Resume
-        </Button>
+        <ButtonContainer>
+          <Button href="https://drive.google.com/file/d/1PGWRP5AwynKhKLBUEb_S_21g1kr8h_oi/view">
+            Resume
+          </Button>
+          <Button href="https://drive.google.com/file/d/1UWVdV4DJ-_PIxSpTryGIX1JGTelmbO2t/view">
+            CoverLetter
+          </Button>
+        </ButtonContainer>
       </LeftSection>
     </Section>
   </>
