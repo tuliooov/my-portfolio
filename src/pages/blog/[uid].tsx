@@ -1,3 +1,4 @@
+import { Layout } from '@/layout/Layout'
 import { createClient } from '@/prismicio'
 import * as prismic from '@prismicio/client'
 import { BlogDocument } from 'prismicio-types'
@@ -17,7 +18,7 @@ export const ContentStyled = styled.div`
 export default function Page({ page }: { page: BlogDocument<string> }) {
   console.log(page)
   return (
-    <div>
+    <Layout>
       <h1>{page.data.title[0]?.text}</h1>
       <p>Publicado: {page.first_publication_date}</p>
       <p>Atualizado: {page.last_publication_date}</p>
@@ -28,7 +29,7 @@ export default function Page({ page }: { page: BlogDocument<string> }) {
       <div
         dangerouslySetInnerHTML={{ __html: prismic.asHTML(page.data.content) }}
       ></div>
-    </div>
+    </Layout>
   )
 }
 
