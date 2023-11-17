@@ -15,7 +15,9 @@
 
 
 ## Next Features
-- [ ] Create a blog with a CSM
+- [x] Create a profile
+- [x] Create a portfolio
+- [x] Create a blog with a CSM
 
 
 ## Next Blog posts

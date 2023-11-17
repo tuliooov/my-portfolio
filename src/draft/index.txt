@@ -1,8 +1,0 @@
-- print portfolio
-- print dashboard prismic (https://prismic.io/dashboard)
-- install prismic and login (print install and ) 
-  certificar se ta logado prismic login
-  npx @slicemachine/init@latest --repository my-portfolio-tuliooov
-
-- run slicemachine
-  npm run slicemachine
