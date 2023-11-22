@@ -11,7 +11,7 @@ const Profile = ({ name, description, profilePicture }) => {
   return (
     <div className="px-4">
       <div className="grid max-w-lg grid-cols-1 justify-items-center gap-8">
-        <PrismicNextLink href="/" tabIndex="-1">
+        {/* <PrismicNextLink href="/" tabIndex="-1"> */}
           <div className="relative h-40 w-40 overflow-hidden rounded-full bg-slate-300">
             {prismic.isFilled.image(profilePicture) && (
               <PrismicNextImage
@@ -22,15 +22,15 @@ const Profile = ({ name, description, profilePicture }) => {
               />
             )}
           </div>
-        </PrismicNextLink>
+        {/* </PrismicNextLink> */}
         {(prismic.isFilled.richText(name) ||
           prismic.isFilled.richText(description)) && (
           <div className="grid grid-cols-1 gap-2 text-center">
             {prismic.isFilled.richText(name) && (
               <Heading>
-                <PrismicNextLink href="/">
+                {/* <PrismicNextLink href="/"> */}
                   <PrismicText field={name} />
-                </PrismicNextLink>
+                {/* </PrismicNextLink> */}
               </Heading>
             )}
             {prismic.isFilled.richText(description) && (

@@ -4,6 +4,7 @@ import { createClient } from "@/prismicio";
 import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
 import { Article } from "@/components/Article";
+import { Heading } from "@/components/Heading";
 
 export async function generateMetadata() {
   const client = createClient();
@@ -31,10 +32,11 @@ export default async function Index() {
       withHeaderDivider={false}
       navigation={navigation}
       settings={settings}
+      withProfile={false}
     >
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
-          <h1>Articles</h1>
+          <Heading>Articles</Heading>
           {articles.map((article) => (
             <Article key={article.id} article={article} />
           ))}

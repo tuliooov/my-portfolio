@@ -4,7 +4,7 @@ export const Heading = ({
   as: Comp = "h1",
   size = "4xl",
   children,
-  className,
+  className = '',
 }) => {
   return (
     <Comp

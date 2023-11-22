@@ -7,6 +7,7 @@ import { findFirstImage } from "@/lib/findFirstImage";
 import { dateFormatter } from "@/lib/dateFormatter";
 
 import { Heading } from "./Heading";
+import { Button } from "./Button";
 
 export function Project({ project }) {
   const featuredImage =
@@ -16,7 +17,7 @@ export function Project({ project }) {
   const date = prismic.asDate(
     project.data.publishDate || project.first_publication_date,
   );
-  const excerpt = getExcerpt(project.data.slices);
+  const description = project.data.meta_description;
 
   return (
     <li className="grid grid-cols-1 items-start gap-6 md:grid-cols-3 md:gap-8">
@@ -26,7 +27,7 @@ export function Project({ project }) {
             <PrismicNextImage
               field={featuredImage}
               fill={true}
-              className="object-cover"
+              className="object-contain"
             />
           )}
         </div>
@@ -40,11 +41,15 @@ export function Project({ project }) {
         <p className="font-serif italic tracking-tighter text-slate-500">
           {dateFormatter.format(date)}
         </p>
-        {excerpt && (
+        {description && (
           <p className="font-serif leading-relaxed md:text-lg md:leading-relaxed">
-            {excerpt}
+            {description}
           </p>
         )}
+        <div className="flex flex-row gap-4">
+        {<Button href={project.data.demo.url} label="Demo" target={project.data.demo.target} />}
+        {<Button href={project.data.code.url} label="Code" target={project.data.code.target}/>}
+        </div>
       </div>
     </li>
   );

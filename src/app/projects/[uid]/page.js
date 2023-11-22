@@ -9,6 +9,8 @@ import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
 import { HorizontalDivider } from "@/components/HorizontalDivider";
+import { ButtonBack } from "@/components/ButtonBack";
+import { Button } from "@/components/Button";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -18,7 +20,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 
 function LatestProject({ project }) {
   const date = prismic.asDate(
-    project.data.publishDate || project.first_publication_date,
+    project.data.publishDate || project.first_publication_date
   );
 
   return (
@@ -44,7 +46,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${prismic.asText(project.data.title)} | ${prismic.asText(
-      settings.data.name,
+      settings.data.name
     )}`,
     description: project.data.meta_description,
     openGraph: {
@@ -74,8 +76,9 @@ export default async function Page({ params }) {
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 
+  console.log(project.data);
   const date = prismic.asDate(
-    project.data.publishDate || project.first_publication_date,
+    project.data.publishDate || project.first_publication_date
   );
 
   return (
@@ -86,9 +89,7 @@ export default async function Page({ params }) {
       settings={settings}
     >
       <Bounded>
-        <Link href="/" className="font-semibold tracking-tight text-slate-400">
-          &larr; Back to project
-        </Link>
+        <ButtonBack />
       </Bounded>
       <article>
         <Bounded className="pb-0">
@@ -98,6 +99,20 @@ export default async function Page({ params }) {
           <p className="font-serif italic tracking-tighter text-slate-500">
             {dateFormatter.format(date)}
           </p>
+          <div className="flex flex-wrap gap-2 mt-4">
+            {(project.tags || []).map((tag) => (
+              <div
+                key={tag}
+                className=" bg-slate-600 text-xs text-slate-50 px-2 py-1 rounded-md"
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
+          <div className="mt-8">
+            {project.data.demo.url && <Button href={project.data.demo.url} label="Demo" target={project.data.demo.target} />}
+            {project.data.code.url && <Button href={project.data.code.url} label="Code" target={project.data.code.target}/>}
+          </div>
         </Bounded>
         <SliceZone slices={project.data.slices} components={components} />
       </article>
@@ -107,7 +122,7 @@ export default async function Page({ params }) {
             <HorizontalDivider />
             <div className="w-full">
               <Heading size="2xl" className="mb-10">
-                Latest articles
+                Latest products
               </Heading>
               <ul className="grid grid-cols-1 gap-12">
                 {latestProject.map((project) => (
@@ -126,7 +141,7 @@ export async function generateStaticParams() {
   const client = createClient();
 
   const projects = await client.getAllByType("project");
-  console.log(projects)
+  console.log(projects);
 
   return projects.map((project) => {
     return { uid: project.uid };

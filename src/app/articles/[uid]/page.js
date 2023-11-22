@@ -9,6 +9,8 @@ import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
 import { HorizontalDivider } from "@/components/HorizontalDivider";
+import { useRouter } from "next/navigation";
+import { ButtonBack } from "@/components/ButtonBack";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -86,9 +88,7 @@ export default async function Page({ params }) {
       settings={settings}
     >
       <Bounded>
-        <Link href="/" className="font-semibold tracking-tight text-slate-400">
-          &larr; Back to articles
-        </Link>
+        <ButtonBack />
       </Bounded>
       <article>
         <Bounded className="pb-0">

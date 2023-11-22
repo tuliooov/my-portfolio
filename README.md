@@ -15,12 +15,18 @@
 
 
 ## Next Features
-- [x] Create a profile
-- [x] Create a portfolio
-- [x] Create a blog with a CSM
+  - [x] Create a profile
+  - [x] Create a portfolio
+  - [x] Create a blog with a CSM
 
+## New Projects to Portfolio
+  - [ ] Create a Flash Cards with chatgpt
+  - [ ] Create a routine gamefication
+  - [ ] Create a system for list of gift tip
 
 ## Next Blog posts
+  - [ ] List of class about international carrer
+  - [ ] List of class about nitro
   - [ ] Creating a BLOG with Prismic CMS in my portfolio in NextJS
   - [ ] Github API for portfolio
   - [ ] ModuleFederation for microfrontend

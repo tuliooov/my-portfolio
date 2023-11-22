@@ -5,6 +5,7 @@ import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
 import { Article } from "@/components/Article";
 import { Project } from "@/components/Project";
+import { Heading } from "@/components/Heading";
 
 export async function generateMetadata() {
   const client = createClient();
@@ -41,11 +42,11 @@ export default async function Index() {
     >
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
-          <h1>Projects</h1>
+          <Heading>Projects</Heading>
           {projects.map((project) => (
             <Project key={project.id} project={project} />
           ))}
-          <h1>Articles</h1>
+          <Heading>Articles</Heading>
           {articles.map((article) => (
             <Article key={article.id} article={article} />
           ))}

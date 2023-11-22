@@ -352,7 +352,7 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-type ProjectDocumentDataSlicesSlice = TextSlice | ImageSlice;
+type ProjectDocumentDataSlicesSlice = QuoteSlice | TextSlice | ImageSlice;
 
 /**
  * Content for Project documents
@@ -363,11 +363,11 @@ interface ProjectDocumentData {
    *
    * - **Field Type**: Date
    * - **Placeholder**: *None*
-   * - **API ID Path**: project.publishdate
+   * - **API ID Path**: project.publishDate
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#date
    */
-  publishdate: prismic.DateField;
+  publishDate: prismic.DateField;
 
   /**
    * Title field in *Project*
@@ -379,6 +379,28 @@ interface ProjectDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   title: prismic.TitleField;
+
+  /**
+   * demo field in *Project*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.demo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  demo: prismic.LinkField;
+
+  /**
+   * code field in *Project*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.code
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  code: prismic.LinkField;
 
   /**
    * Slice Zone field in *Project*
@@ -724,9 +746,37 @@ export type TextSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Text → Primary*
+ */
+export interface TextSliceInsightsPrimary {
+  /**
+   * Text field in *Text → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Text with rich formatting
+   * - **API ID Path**: text.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * insights variation for Text Slice
+ *
+ * - **API ID**: `insights`
+ * - **Description**: Text
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextSliceInsights = prismic.SharedSliceVariation<
+  "insights",
+  Simplify<TextSliceInsightsPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Text*
  */
-type TextSliceVariation = TextSliceDefault;
+type TextSliceVariation = TextSliceDefault | TextSliceInsights;
 
 /**
  * Text Shared Slice
@@ -780,8 +830,10 @@ declare module "@prismicio/client" {
       QuoteSliceDefault,
       TextSlice,
       TextSliceDefaultPrimary,
+      TextSliceInsightsPrimary,
       TextSliceVariation,
       TextSliceDefault,
+      TextSliceInsights,
     };
   }
 }
