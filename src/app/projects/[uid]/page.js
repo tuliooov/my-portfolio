@@ -10,7 +10,8 @@ import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
 import { HorizontalDivider } from "@/components/HorizontalDivider";
 import { ButtonBack } from "@/components/ButtonBack";
-import { Button } from "@/components/Button";
+import { ButtonActions } from "@/components/ProjectCard/ButtonActions";
+import { TagsActions } from "@/components/ProjectCard/Tags";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -99,19 +100,20 @@ export default async function Page({ params }) {
           <p className="font-serif italic tracking-tighter text-slate-500">
             {dateFormatter.format(date)}
           </p>
-          <div className="flex flex-wrap gap-2 mt-4">
-            {(project.tags || []).map((tag) => (
-              <div
-                key={tag}
-                className=" bg-slate-600 text-xs text-slate-50 px-2 py-1 rounded-md"
-              >
-                {tag}
-              </div>
-            ))}
-          </div>
+          
+          <TagsActions tags={project.tags}/>
+
           <div className="mt-8">
-            {project.data.demo.url && <Button href={project.data.demo.url} label="Demo" target={project.data.demo.target} />}
-            {project.data.code.url && <Button href={project.data.code.url} label="Code" target={project.data.code.target}/>}
+            <ButtonActions
+              code={{
+                url: project.data.code.url,
+                target: project.data.code.target,
+              }}
+              demo={{
+                url: project.data.demo.url,
+                target: project.data.demo.target,
+              }}
+            />
           </div>
         </Bounded>
         <SliceZone slices={project.data.slices} components={components} />
@@ -122,7 +124,7 @@ export default async function Page({ params }) {
             <HorizontalDivider />
             <div className="w-full">
               <Heading size="2xl" className="mb-10">
-                Latest products
+                Latest projects
               </Heading>
               <ul className="grid grid-cols-1 gap-12">
                 {latestProject.map((project) => (

@@ -4,8 +4,9 @@ import { createClient } from "@/prismicio";
 import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
 import { Article } from "@/components/Article";
-import { Project } from "@/components/Project";
+import { Project } from "@/components/ProjectCard";
 import { Heading } from "@/components/Heading";
+import { HorizontalDivider } from "@/components/HorizontalDivider";
 
 export async function generateMetadata() {
   const client = createClient();
@@ -46,10 +47,15 @@ export default async function Index() {
           {projects.map((project) => (
             <Project key={project.id} project={project} />
           ))}
+          {projects.length === 0 && <p>We didn`t found anythink projects.</p>}
+          <div className="grid grid-cols-1 justify-items-center w-full">
+            <HorizontalDivider />
+          </div>
           <Heading>Articles</Heading>
           {articles.map((article) => (
             <Article key={article.id} article={article} />
           ))}
+          {articles.length === 0 && <p>We didn`t found anythink articles.</p>}
         </ul>
       </Bounded>
     </Layout>

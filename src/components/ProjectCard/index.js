@@ -2,12 +2,12 @@ import { PrismicText } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import * as prismic from "@prismicio/client";
 
-import { getExcerpt } from "@/lib/getExcerpt";
 import { findFirstImage } from "@/lib/findFirstImage";
 import { dateFormatter } from "@/lib/dateFormatter";
 
-import { Heading } from "./Heading";
-import { Button } from "./Button";
+import { Heading } from "../Heading";
+import { ButtonActions } from "./ButtonActions";
+import { TagsActions } from "./Tags";
 
 export function Project({ project }) {
   const featuredImage =
@@ -46,10 +46,14 @@ export function Project({ project }) {
             {description}
           </p>
         )}
-        <div className="flex flex-row gap-4">
-        {<Button href={project.data.demo.url} label="Demo" target={project.data.demo.target} />}
-        {<Button href={project.data.code.url} label="Code" target={project.data.code.target}/>}
-        </div>
+        <TagsActions tags={project.tags}/>
+        <ButtonActions code={{
+          url: project.data.code.url,
+          target: project.data.code.target
+        }} demo={{
+          url: project.data.demo.url,
+          target: project.data.demo.target
+        }}/>
       </div>
     </li>
   );

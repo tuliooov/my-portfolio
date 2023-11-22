@@ -7,6 +7,7 @@ import { findFirstImage } from "@/lib/findFirstImage";
 import { dateFormatter } from "@/lib/dateFormatter";
 
 import { Heading } from "./Heading";
+import { TagsActions } from "./ProjectCard/Tags";
 
 export function Article({ article }) {
   const featuredImage =
@@ -16,7 +17,7 @@ export function Article({ article }) {
   const date = prismic.asDate(
     article.data.publishDate || article.first_publication_date,
   );
-  const excerpt = getExcerpt(article.data.slices);
+  const description = article.data.meta_description;
 
   return (
     <li className="grid grid-cols-1 items-start gap-6 md:grid-cols-3 md:gap-8">
@@ -26,7 +27,7 @@ export function Article({ article }) {
             <PrismicNextImage
               field={featuredImage}
               fill={true}
-              className="object-cover"
+              className="object-contain"
             />
           )}
         </div>
@@ -40,11 +41,12 @@ export function Article({ article }) {
         <p className="font-serif italic tracking-tighter text-slate-500">
           {dateFormatter.format(date)}
         </p>
-        {excerpt && (
+        {description && (
           <p className="font-serif leading-relaxed md:text-lg md:leading-relaxed">
-            {excerpt}
+            {description}
           </p>
         )}
+        <TagsActions tags={article.tags}/>
       </div>
     </li>
   );

@@ -3,7 +3,7 @@ import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
-import { Project } from "@/components/Project";
+import { Project } from "@/components/ProjectCard";
 import { Heading } from "@/components/Heading";
 
 export async function generateMetadata() {
@@ -37,6 +37,7 @@ export default async function Index() {
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
           <Heading>Projects</Heading>
+          {projects.length === 0 && <p>We didn`t found anythink projects.</p>}
           {projects.map((project) => (
             <Project key={project.id} project={project} />
           ))}

@@ -32,7 +32,7 @@ function SignUpForm({ settings }) {
             />
           </div>
         )}
-        <div className="grid grid-cols-1 gap-2">
+        {/* <div className="grid grid-cols-1 gap-2">
           <div className="relative">
             <label>
               <span className="sr-only">Email address</span>
@@ -57,7 +57,7 @@ function SignUpForm({ settings }) {
               <PrismicText field={settings.data.newsletterDisclaimer} />
             </p>
           )}
-        </div>
+        </div> */}
       </form>
     </div>
   );

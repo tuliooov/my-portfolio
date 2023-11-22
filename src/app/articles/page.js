@@ -17,7 +17,6 @@ export async function generateMetadata() {
 export default async function Index() {
   const client = createClient();
 
-
   const articles = await client.getAllByType("article", {
     orderings: [
       { field: "my.article.publishDate", direction: "desc" },
@@ -37,6 +36,7 @@ export default async function Index() {
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
           <Heading>Articles</Heading>
+          {articles.length === 0 && <p>We didn`t found anythink articles.</p>}
           {articles.map((article) => (
             <Article key={article.id} article={article} />
           ))}
