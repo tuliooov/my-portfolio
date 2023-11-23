@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { ImageResponse } from 'next/og'
-import profilePic from '../public/profile.jpeg'
 
 // Route segment config
 export const runtime = 'edge'
@@ -17,20 +16,20 @@ export default function Icon() {
   return new ImageResponse(
     (
       // ImageResponse JSX element
-      <div
-        style={{
-          fontSize: 24,
-          background: 'black',
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: 'white',
-        }}
-      >
-        <Image src={profilePic} alt='favicon marco tulio'  width={size.width} height={size.height} />
-      </div>
+      // <div
+      //   style={{
+      //     fontSize: 24,
+      //     background: 'black',
+      //     width: '100%',
+      //     height: '100%',
+      //     display: 'flex',
+      //     alignItems: 'center',
+      //     justifyContent: 'center',
+      //     color: 'white',
+      //   }}
+      // >
+      // </div>
+      <img src={'https://images.prismic.io/blogtulioov/6556bd87531ac2845a253b44_profile.ico?auto=format%2Ccompress&rect=0%2C0%2C256%2C256&w=828&fit=max'} alt='favicon marco tulio'  width={size.width} height={size.height} />
     ),
     // ImageResponse options
     {

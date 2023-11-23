@@ -1,13 +1,14 @@
-import Link from "next/link";
-import { PrismicText } from "@prismicio/react";
+import { Github, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import * as prismic from "@prismicio/client";
 
 import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 import { HorizontalDivider } from "./HorizontalDivider";
 import { PrismicRichText } from "./PrismicRichText";
+import { Button } from "./Button";
+import { LinkButton } from "./LinkButton";
 
-function SignUpForm({ settings }) {
+function SignUpForm({ settings }: any) {
   return (
     <div className="px-4">
       <form
@@ -20,20 +21,24 @@ function SignUpForm({ settings }) {
             <PrismicRichText
               field={settings.data.newsletterDescription}
               components={{
-                heading1: ({ children }) => (
+                heading1: ({ children }: any) => (
                   <Heading as="h2" className="mb-4 last:mb-0">
                     {children}
                   </Heading>
                 ),
-                paragraph: ({ children }) => (
+                paragraph: ({ children }: any) => (
                   <p className="mb-4 italic last:mb-0">{children}</p>
                 ),
               }}
             />
           </div>
         )}
-        {/* <div className="grid grid-cols-1 gap-2">
-          <div className="relative">
+        <div className="flex flex-wrap gap-2 justify-center">
+          <LinkButton href="https://github.com/tuliooov" icon={Github} circle target={'_blank'} />
+          <LinkButton href="https://www.linkedin.com/in/marcotuliovaleriano/" icon={Linkedin} circle target={'_blank'} />
+          <LinkButton href="https://www.instagram.com/_marcovaleriano/" icon={Instagram} circle target={'_blank'} />
+          <LinkButton href="https://api.whatsapp.com/send/?phone=5537988031061&text&type=phone_number&app_absent=0" icon={MessageCircle} circle target={'_blank'} />
+          {/* <div className="relative">
             <label>
               <span className="sr-only">Email address</span>
               <input
@@ -51,25 +56,23 @@ function SignUpForm({ settings }) {
               <span className="sr-only">Submit</span>
               <span aria-hidden={true}>&rarr;</span>
             </button>
-          </div>
-          {prismic.isFilled.richText(settings.data.newsletterDisclaimer) && (
+          </div> */}
+          {/* {prismic.isFilled.richText(settings.data.newsletterDisclaimer) && (
             <p className="text-center text-xs tracking-tight text-slate-500">
               <PrismicText field={settings.data.newsletterDisclaimer} />
             </p>
-          )}
-        </div> */}
+          )} */}
+        </div>
       </form>
     </div>
   );
 }
 
-export function Footer({ withSignUpForm = true, settings }) {
+export function Footer({ withSignUpForm = true, settings }: any) {
   return (
     <Bounded as="footer">
-      <div className="grid grid-cols-1 justify-items-center gap-24">
         <HorizontalDivider />
         {withSignUpForm && <SignUpForm settings={settings} />}
-      </div>
     </Bounded>
   );
 }

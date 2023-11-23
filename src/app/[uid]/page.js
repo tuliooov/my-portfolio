@@ -1,10 +1,12 @@
 import * as prismic from "@prismicio/client";
-import { SliceZone } from "@prismicio/react";
+import { PrismicText, SliceZone } from "@prismicio/react";
 import { notFound } from "next/navigation";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { Layout } from "@/components/Layout";
+import { TagsActions } from "@/components/ProjectCard/Tags";
+import { Bounded } from "@/components/Bounded";
 
 export async function generateMetadata({ params }) {
   const client = createClient();
@@ -15,7 +17,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${prismic.asText(page.data.title)} | ${prismic.asText(
-      settings.data.name,
+      settings.data.name
     )}`,
     description: page.data.meta_description,
     openGraph: {
@@ -37,10 +39,23 @@ export default async function Page({ params }) {
     .catch(() => notFound());
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
-  
+
   return (
-    <Layout navigation={navigation} settings={settings}>
-      <SliceZone slices={page.data.slices} components={components} />
+    <Layout
+      navigation={navigation}
+      settings={settings}
+      withProfile={true}
+      profileLine
+    >
+      <article>
+        <Bounded className="py-0 md:py-0 lg:py-0">
+          {/* <h1 className="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
+            <PrismicText field={page.data.title} />
+          </h1> */}
+          <TagsActions tags={page.tags} />
+        </Bounded>
+        <SliceZone slices={page.data.slices} components={components} />
+      </article>
     </Layout>
   );
 }

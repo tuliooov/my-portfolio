@@ -1,4 +1,4 @@
-import { LinkButton } from "@/components/Button"
+import { LinkButton } from "@/components/LinkButton"
 
 interface TagsActionsProps {
   tags?: string[]

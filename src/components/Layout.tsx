@@ -7,6 +7,7 @@ export function Layout({
   withHeaderDivider,
   withProfile,
   withSignUpForm,
+  profileLine,
   children,
 }: any) {
   return (
@@ -16,6 +17,7 @@ export function Layout({
         withDivider={withHeaderDivider}
         navigation={navigation}
         settings={settings}
+        profileLine={profileLine}
       />
       <main>{children}</main>
       <Footer withSignUpForm={withSignUpForm} settings={settings} />

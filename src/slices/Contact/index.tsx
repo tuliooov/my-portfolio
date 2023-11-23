@@ -6,7 +6,7 @@ const Contact = () => {
       <div
         className="grid grid-cols-1 gap-6"
       >
-        tests
+        sem conteudo
       </div>
     </Bounded>
   );

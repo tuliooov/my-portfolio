@@ -7,6 +7,8 @@ import { Article } from "@/components/Article";
 import { Project } from "@/components/ProjectCard";
 import { Heading } from "@/components/Heading";
 import { HorizontalDivider } from "@/components/HorizontalDivider";
+import Link from "next/link";
+import { ButtonNext } from "@/components/ButtonBack";
 
 export async function generateMetadata() {
   const client = createClient();
@@ -25,19 +27,21 @@ export default async function Index() {
       { field: "my.article.publishDate", direction: "desc" },
       { field: "document.first_publication_date", direction: "desc" },
     ],
+    limit: 5
   });
   const projects = await client.getAllByType("project", {
     orderings: [
       { field: "my.project.publishDate", direction: "desc" },
       { field: "document.first_publication_date", direction: "desc" },
     ],
+    limit: 5
   });
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 
   return (
     <Layout
-      withHeaderDivider={false}
+      withHeaderDivider={true}
       navigation={navigation}
       settings={settings}
     >
@@ -47,15 +51,15 @@ export default async function Index() {
           {projects.map((project) => (
             <Project key={project.id} project={project} />
           ))}
+          <ButtonNext href={"/projects"} />
           {projects.length === 0 && <p>We didn`t found anythink projects.</p>}
-          <div className="grid grid-cols-1 justify-items-center w-full">
-            <HorizontalDivider />
-          </div>
+          <HorizontalDivider />
           <Heading>Articles</Heading>
           {articles.map((article) => (
             <Article key={article.id} article={article} />
           ))}
           {articles.length === 0 && <p>We didn`t found anythink articles.</p>}
+          <ButtonNext href={"/articles"} />
         </ul>
       </Bounded>
     </Layout>
