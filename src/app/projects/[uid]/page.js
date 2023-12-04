@@ -77,7 +77,6 @@ export default async function Page({ params }) {
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 
-  console.log(project.data);
   const date = prismic.asDate(
     project.data.publishDate || project.first_publication_date
   );
@@ -143,7 +142,6 @@ export async function generateStaticParams() {
   const client = createClient();
 
   const projects = await client.getAllByType("project");
-  console.log(projects);
 
   return projects.map((project) => {
     return { uid: project.uid };

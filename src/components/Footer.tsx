@@ -10,7 +10,7 @@ import { LinkButton } from "./LinkButton";
 
 function SignUpForm({ settings }: any) {
   return (
-    <div className="px-4">
+    <div className="px-4 flex justify-center">
       <form
         action="/api/sign-up"
         method="post"

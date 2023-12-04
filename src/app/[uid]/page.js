@@ -1,12 +1,10 @@
 import * as prismic from "@prismicio/client";
-import { PrismicText, SliceZone } from "@prismicio/react";
+import { SliceZone } from "@prismicio/react";
 import { notFound } from "next/navigation";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { Layout } from "@/components/Layout";
-import { TagsActions } from "@/components/ProjectCard/Tags";
-import { Bounded } from "@/components/Bounded";
 
 export async function generateMetadata({ params }) {
   const client = createClient();
@@ -47,15 +45,7 @@ export default async function Page({ params }) {
       withProfile={true}
       profileLine
     >
-      <article>
-        <Bounded className="py-0 md:py-0 lg:py-0">
-          {/* <h1 className="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
-            <PrismicText field={page.data.title} />
-          </h1> */}
-          <TagsActions tags={page.tags} />
-        </Bounded>
-        <SliceZone slices={page.data.slices} components={components} />
-      </article>
+      <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
 }

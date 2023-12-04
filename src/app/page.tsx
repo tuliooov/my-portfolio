@@ -41,7 +41,7 @@ export default async function Index() {
 
   return (
     <Layout
-      withHeaderDivider={true}
+      withHeaderDivider={false}
       navigation={navigation}
       settings={settings}
     >

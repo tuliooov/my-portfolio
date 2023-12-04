@@ -6,12 +6,15 @@ import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 import { HorizontalDivider } from "./HorizontalDivider";
+import { TagsActions } from "./ProjectCard/Tags";
 
-const ProfileLine = ({ name, description, profilePicture }) => {
+const ProfileLine = ({ name, description, profilePicture, tags }) => {
   return (
     <div className="px-4">
       <div className="flex w-full flex-row justify-items-center gap-8">
-        <div className="relative h-24 w-24 overflow-hidden rounded-full bg-slate-300">
+        <div className="h-40 w-40">
+
+        <div className="relative h-40 w-40 overflow-hidden rounded-full bg-slate-300">
           {prismic.isFilled.image(profilePicture) && (
             <PrismicNextImage
               field={profilePicture}
@@ -21,10 +24,11 @@ const ProfileLine = ({ name, description, profilePicture }) => {
             />
           )}
         </div>
+        </div>
         {/* </PrismicNextLink> */}
         {(prismic.isFilled.richText(name) ||
           prismic.isFilled.richText(description)) && (
-          <div className="grid grid-cols-1 gap-0 text-center">
+          <div className="flex flex-col gap-0 text-center">
             {prismic.isFilled.richText(name) && (
               <Heading>
                 <p className="text-md">
@@ -37,6 +41,10 @@ const ProfileLine = ({ name, description, profilePicture }) => {
                 <PrismicText field={description} />
               </p>
             )}
+
+            <div>
+              <TagsActions tags={tags} />
+            </div>
           </div>
         )}
       </div>
@@ -44,7 +52,7 @@ const ProfileLine = ({ name, description, profilePicture }) => {
   );
 };
 
-const Profile = ({ name, description, profilePicture }) => {
+const Profile = ({ name, description, profilePicture, tags }) => {
   return (
     <div className="px-4">
       <div className="grid max-w-lg grid-cols-1 justify-items-center gap-8">
@@ -75,6 +83,9 @@ const Profile = ({ name, description, profilePicture }) => {
                 <PrismicText field={description} />
               </p>
             )}
+            <div>
+              <TagsActions tags={tags} />
+            </div>
           </div>
         )}
       </div>
@@ -120,12 +131,14 @@ export const Header = ({
               name={settings.data.name}
               description={settings.data.description}
               profilePicture={settings.data.profilePicture}
-            />
-          ) : (
+              tags={settings.tags}
+              />
+              ) : (
             <Profile
               name={settings.data.name}
               description={settings.data.description}
               profilePicture={settings.data.profilePicture}
+              tags={settings.tags}
             />
           ))}
         {withDivider && <HorizontalDivider />}
