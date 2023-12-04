@@ -30,7 +30,7 @@ export const createClient = (config = {}) => {
   const client = prismic.createClient(repositoryName, {
     fetch,
     routes,
-    accessToken: process.env.NEXt_PUBLIC_PRISMIC_API_KEY,
+    accessToken: process.env.NEXT_PUBLIC_PRISMIC_API_KEY,
     // fetchOptions:
     //   process.env.NODE_ENV === "production"
     //     ? { next: { tags: ["prismic"] }, cache: "force-cache" }
