@@ -5,6 +5,7 @@ import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
 import { Article } from "@/components/Article";
 import { Heading } from "@/components/Heading";
+import React from "react";
 
 export async function generateMetadata() {
   const client = createClient();
@@ -23,6 +24,9 @@ export default async function Index() {
       { field: "document.first_publication_date", direction: "desc" },
     ],
   });
+
+  console.log("articles", articles)
+
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 

@@ -5,6 +5,7 @@ import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
 import { Project } from "@/components/ProjectCard";
 import { Heading } from "@/components/Heading";
+import React from "react";
 
 export async function generateMetadata() {
   const client = createClient();

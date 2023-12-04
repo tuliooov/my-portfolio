@@ -7,8 +7,8 @@ import { Article } from "@/components/Article";
 import { Project } from "@/components/ProjectCard";
 import { Heading } from "@/components/Heading";
 import { HorizontalDivider } from "@/components/HorizontalDivider";
-import Link from "next/link";
 import { ButtonNext } from "@/components/ButtonBack";
+import React from "react";
 
 export async function generateMetadata() {
   const client = createClient();
@@ -48,18 +48,25 @@ export default async function Index() {
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
           <Heading>Projects</Heading>
-          {projects.map((project) => (
-            <Project key={project.id} project={project} />
-          ))}
-          <ButtonNext href={"/projects"} />
-          {projects.length === 0 && <p>We didn`t found anythink projects.</p>}
+          {projects.length === 0 ? <p>We didn`t found anythink projects.</p> :
+            <>
+              {projects.map((project) => (
+                <Project key={project.id} project={project} />
+              ))}
+              <ButtonNext href={"/projects"} />
+            </>}
+          
           <HorizontalDivider />
+          
           <Heading>Articles</Heading>
-          {articles.map((article) => (
-            <Article key={article.id} article={article} />
-          ))}
-          {articles.length === 0 && <p>We didn`t found anythink articles.</p>}
-          <ButtonNext href={"/articles"} />
+          {articles.length === 0 ? <p>We didn`t found anythink articles.</p> :
+            <>
+              {articles.map((article) => (
+                <Article key={article.id} article={article} />
+              ))}
+              <ButtonNext href={"/articles"} />
+            </>}
+
         </ul>
       </Bounded>
     </Layout>

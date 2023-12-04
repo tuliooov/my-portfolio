@@ -3,9 +3,6 @@ import * as prismicNext from "@prismicio/next";
 import config from "../slicemachine.config.json";
 import fetch from 'node-fetch'
 
-/**
- * The project's Prismic repository name.
- */
 export const repositoryName =
   process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENTS || config.repositoryName;
 
@@ -29,12 +26,6 @@ const routes = [
   },
 ];
 
-/**
- * Creates a Prismic client for the project's repository. The client is used to
- * query content from the Prismic API.
- *
- * @param config {prismicNext.CreateClientConfig} - A configuration object to
- */
 export const createClient = (config = {}) => {
   const client = prismic.createClient(repositoryName, {
     fetch,
