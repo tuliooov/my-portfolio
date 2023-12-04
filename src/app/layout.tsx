@@ -5,7 +5,6 @@ import { Inter, Libre_Baskerville } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import { ReactNode } from "react";
-import Image from "next/image";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,7 +28,7 @@ export default function RootLayout({ children }: {
       className={`${inter.className} ${libre_baskerville.className}`}
     >
       <head>
-        <link rel="icon" href="/icon?<generated>" type="image/png" sizes="32x32" />
+        <link rel="icon" href="https://images.prismic.io/blogtulioov/6556bd87531ac2845a253b44_profile.ico?auto=format%2Ccompress&rect=0%2C0%2C256%2C256&w=828&fit=max" type="image/png" sizes="32x32" />
       </head>
       <body className="overflow-x-hidden antialiased">
         <main>

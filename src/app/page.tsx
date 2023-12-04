@@ -15,6 +15,15 @@ export async function generateMetadata() {
   const settings = await client.getSingle("settings");
   return {
     title: prismic.asText(settings.data.name),
+    metadataBase: new URL('https://tuliooov.github.io/my-portfolio/'),
+    openGraph: {
+      title: settings.data.name,
+      images: [
+        {
+          url: 'https://images.prismic.io/blogtulioov/6556bd87531ac2845a253b44_profile.ico?auto=format%2Ccompress&rect=0%2C0%2C256%2C256&w=828&fit=max',
+        },
+      ],
+    },
   };
 }
 
