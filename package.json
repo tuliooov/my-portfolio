@@ -11,12 +11,6 @@
     "url": "https://github.com/tuliooov/my-portfolio/issues"
   },
   "author": "Marco Túlio de Oliveira Valeriano",
-  "engines": {
-    "node": ">=20.9.0"
-  },
-  "volta": {
-    "node": "20.9.0"
-  },
   "scripts": {
     "dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" --names \"next,slicemachine\" --prefix-colors blue,magenta",
     "next:dev": "next",
