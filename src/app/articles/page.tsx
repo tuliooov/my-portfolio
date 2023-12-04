@@ -25,8 +25,6 @@ export default async function Index() {
     ],
   });
 
-  console.log("articles", articles)
-
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 
