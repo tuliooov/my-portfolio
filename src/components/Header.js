@@ -11,19 +11,18 @@ import { TagsActions } from "./ProjectCard/Tags";
 const ProfileLine = ({ name, description, profilePicture, tags }) => {
   return (
     <div className="px-4">
-      <div className="flex w-full flex-row justify-items-center gap-8">
-        <div className="h-40 w-40">
-
-        <div className="relative h-40 w-40 overflow-hidden rounded-full bg-slate-300">
-          {prismic.isFilled.image(profilePicture) && (
-            <PrismicNextImage
-              field={profilePicture}
-              fill={true}
-              sizes="100vw"
-              className="object-cover"
-            />
-          )}
-        </div>
+      <div className="flex w-full flex-col sm:flex-col md:flex-row lg:flex-row justify-items-center gap-8 items-center">
+        <div className="h-16 w-16  md:h-32 md:w-32  lg:h-40 lg:w-40">
+          <div className="relative  h-16 w-16  md:h-32 md:w-32  lg:h-40 lg:w-40 overflow-hidden rounded-full bg-slate-300">
+            {prismic.isFilled.image(profilePicture) && (
+              <PrismicNextImage
+                field={profilePicture}
+                fill={true}
+                sizes="100vw"
+                className="object-cover"
+              />
+            )}
+          </div>
         </div>
         {/* </PrismicNextLink> */}
         {(prismic.isFilled.richText(name) ||
