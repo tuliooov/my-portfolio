@@ -629,6 +629,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "(rsc)/./node_modules/@prismicio/client/dist/helpers/asDate.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@prismicio/client/dist/helpers/asDate.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   asDate: () => (/* binding */ asDate)\n/* harmony export */ });\nconst asDate = (dateOrTimestampField)=>{\n    if (!dateOrTimestampField) {\n        return null;\n    }\n    if (dateOrTimestampField.length === 24) {\n        return new Date(dateOrTimestampField.replace(/(\\+|-)(\\d{2})(\\d{2})$/, \".000$1$2:$3\"));\n    } else {\n        return new Date(dateOrTimestampField);\n    }\n};\n //# sourceMappingURL=asDate.js.map\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvQHByaXNtaWNpby9jbGllbnQvZGlzdC9oZWxwZXJzL2FzRGF0ZS5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBQUEsTUFBTUEsU0FBUyxDQUFDQztJQUNkLElBQUksQ0FBQ0Esc0JBQXNCO1FBQ3pCLE9BQU87SUFDVDtJQUNBLElBQUlBLHFCQUFxQkMsTUFBTSxLQUFLLElBQUk7UUFDdEMsT0FBTyxJQUFJQyxLQUFLRixxQkFBcUJHLE9BQU8sQ0FBQyx5QkFBeUI7SUFDeEUsT0FBTztRQUNMLE9BQU8sSUFBSUQsS0FBS0Y7SUFDbEI7QUFDRjtBQUdFLENBQ0Ysa0NBQWtDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbXktcG9ydGZvbGlvLy4vbm9kZV9tb2R1bGVzL0BwcmlzbWljaW8vY2xpZW50L2Rpc3QvaGVscGVycy9hc0RhdGUuanM/MmM3ZCJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBhc0RhdGUgPSAoZGF0ZU9yVGltZXN0YW1wRmllbGQpID0+IHtcbiAgaWYgKCFkYXRlT3JUaW1lc3RhbXBGaWVsZCkge1xuICAgIHJldHVybiBudWxsO1xuICB9XG4gIGlmIChkYXRlT3JUaW1lc3RhbXBGaWVsZC5sZW5ndGggPT09IDI0KSB7XG4gICAgcmV0dXJuIG5ldyBEYXRlKGRhdGVPclRpbWVzdGFtcEZpZWxkLnJlcGxhY2UoLyhcXCt8LSkoXFxkezJ9KShcXGR7Mn0pJC8sIFwiLjAwMCQxJDI6JDNcIikpO1xuICB9IGVsc2Uge1xuICAgIHJldHVybiBuZXcgRGF0ZShkYXRlT3JUaW1lc3RhbXBGaWVsZCk7XG4gIH1cbn07XG5leHBvcnQge1xuICBhc0RhdGVcbn07XG4vLyMgc291cmNlTWFwcGluZ1VSTD1hc0RhdGUuanMubWFwXG4iXSwibmFtZXMiOlsiYXNEYXRlIiwiZGF0ZU9yVGltZXN0YW1wRmllbGQiLCJsZW5ndGgiLCJEYXRlIiwicmVwbGFjZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/@prismicio/client/dist/helpers/asDate.js\n");
+
+/***/ }),
+
 /***/ "(rsc)/./node_modules/@prismicio/client/dist/helpers/asLink.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@prismicio/client/dist/helpers/asLink.js ***!

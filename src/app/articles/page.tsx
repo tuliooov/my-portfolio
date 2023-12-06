@@ -11,7 +11,7 @@ export async function generateMetadata() {
   const client = createClient();
   const settings = await client.getSingle("settings");
   return {
-    title: prismic.asText(settings.data.name),
+    title: `Articles | ${prismic.asText(settings.data.name)}` ,
     metadataBase: new URL('https://tuliooov.github.io/my-portfolio/articles'),
     openGraph: {
       title: settings.data.name,
