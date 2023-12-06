@@ -42,7 +42,7 @@ export default async function Page({ params }) {
     <Layout
       navigation={navigation}
       settings={settings}
-      withProfile={true}
+      withProfile={false}
       profileLine
     >
       <SliceZone slices={page.data.slices} components={components} />
