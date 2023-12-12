@@ -9,13 +9,13 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export const LinkButton = ({ children, icon: Icon, circle, href, ...rest }: LinkProps) => {
   if (!href) {
-    return <div className={`${href ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-400 cursor-not-allowed'} text-lg disabled:bg-slate-400 text-slate-50 px-2 py-1 rounded-md ${circle ? 'rounded-full' : 'rounded-md'} w-min`}>
+    return <div className={`${href ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-400 cursor-not-allowed'} text-lg disabled:bg-slate-400 text-slate-50 px-2 py-1 rounded-md ${circle ? 'rounded-full' : 'rounded-md'} w-min flex flex-row gap-2`}>
       {Icon && <Icon />}
       {children}
     </div>
   }
   return (
-    <Link className={`${href ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-400 cursor-not-allowed'} text-lg disabled:bg-slate-400 text-slate-50 px-2 py-1 rounded-md ${circle ? 'rounded-full' : 'rounded-md'} w-min`} href={href} {...rest}>
+    <Link className={`${href ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-400 cursor-not-allowed'} text-lg disabled:bg-slate-400 text-slate-50 px-2 py-1 rounded-md ${circle ? 'rounded-full' : 'rounded-md'} w-min flex flex-row gap-2`} href={href} {...rest}>
       {Icon && <Icon />}
       {children}
     </Link>

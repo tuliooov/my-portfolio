@@ -2,13 +2,17 @@ import Link from "next/link";
 import * as prismic from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
+import { MailOpen, BookOpenText } from 'lucide-react';
 
 import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 import { HorizontalDivider } from "./HorizontalDivider";
 import { TagsActions } from "./ProjectCard/Tags";
+import { Button } from "./Button";
+import { LinkButton } from "./LinkButton";
 
-const ProfileLine = ({ name, description, profilePicture, tags }) => {
+const ProfileLine = ({ data, tags }) => {
+  const { name, description, profilePicture, resume, coverletter } = data
   return (
     <div className="px-4">
       <div className="flex w-full flex-col sm:flex-col md:flex-row lg:flex-row justify-items-center gap-8 items-center">
@@ -44,6 +48,15 @@ const ProfileLine = ({ name, description, profilePicture, tags }) => {
             <div>
               <TagsActions tags={tags} />
             </div>
+
+            <div className="flex flex-row gap-2 justify-center mt-2">
+              <LinkButton href={resume.url} target={resume.target} icon={BookOpenText}>
+                Resume
+              </LinkButton>
+              <LinkButton href={coverletter.url} target={coverletter.target} icon={MailOpen}>
+                CoverLetter
+              </LinkButton>
+            </div>
           </div>
         )}
       </div>
@@ -51,7 +64,8 @@ const ProfileLine = ({ name, description, profilePicture, tags }) => {
   );
 };
 
-const Profile = ({ name, description, profilePicture, tags }) => {
+const Profile = ({ data, tags }) => {
+  const { name, description, profilePicture, resume, coverletter } = data
   return (
     <div className="px-4">
       <div className="grid max-w-lg grid-cols-1 justify-items-center gap-8">
@@ -84,6 +98,14 @@ const Profile = ({ name, description, profilePicture, tags }) => {
             )}
             <div>
               <TagsActions tags={tags} />
+            </div>
+            <div className="flex flex-row gap-2 justify-center mt-2">
+              <LinkButton href={resume.url} target={resume.target} icon={BookOpenText}>
+                Resume
+              </LinkButton>
+              <LinkButton href={coverletter.url} target={coverletter.target} icon={MailOpen}>
+                CoverLetter
+              </LinkButton>
             </div>
           </div>
         )}
@@ -127,17 +149,11 @@ export const Header = ({
         {withProfile &&
           (profileLine ? (
             <ProfileLine
-              name={settings.data.name}
-              description={settings.data.description}
-              profilePicture={settings.data.profilePicture}
-              tags={settings.tags}
-              />
-              ) : (
+              {...settings}
+            />
+          ) : (
             <Profile
-              name={settings.data.name}
-              description={settings.data.description}
-              profilePicture={settings.data.profilePicture}
-              tags={settings.tags}
+              {...settings}
             />
           ))}
         {withDivider && <HorizontalDivider />}

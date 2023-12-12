@@ -52,6 +52,22 @@
           "allowTargetBlank": true,
           "multi": "paragraph,em,strong,hyperlink"
         }
+      },
+      "coverletter": {
+        "type": "Link",
+        "config": {
+          "label": "coverletter",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "resume": {
+        "type": "Link",
+        "config": {
+          "label": "resume",
+          "placeholder": "",
+          "select": null
+        }
       }
     }
   }
