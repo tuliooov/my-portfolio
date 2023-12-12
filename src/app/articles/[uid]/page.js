@@ -11,6 +11,7 @@ import { Heading } from "@/components/Heading";
 import { HorizontalDivider } from "@/components/HorizontalDivider";
 import { useRouter } from "next/navigation";
 import { ButtonBack } from "@/components/ButtonBack";
+import { TagsActions } from "@/components/ProjectCard/Tags";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
