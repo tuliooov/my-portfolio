@@ -98,6 +98,7 @@ export default async function Page({ params }) {
           <p className="font-serif italic tracking-tighter text-slate-500">
             {dateFormatter.format(date)}
           </p>
+          <TagsActions tags={article.tags}/>
         </Bounded>
         <SliceZone slices={article.data.slices} components={components} />
       </article>
