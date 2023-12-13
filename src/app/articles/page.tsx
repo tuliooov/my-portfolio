@@ -10,8 +10,6 @@ import { getPostFiltered } from "@/utils";
 import { TagsFilter } from "@/components/ProjectCard/TagsFilter";
 import { ArticleDocument } from "prismicio-types";
 
-export const dynamic = 'force-static'
-
 export async function generateMetadata() {
   const client = createClient();
   const settings = await client.getSingle("settings");
