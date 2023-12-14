@@ -9,6 +9,7 @@ import React from "react";
 import { getPostFiltered } from "@/utils";
 import { TagsFilter } from "@/components/ProjectCard/TagsFilter";
 import { ArticleDocument } from "prismicio-types";
+import ListArticles from "@/components/ListArticles";
 
 export const dynamic = 'force-static'
 
@@ -54,8 +55,6 @@ export default async function Index({ searchParams }: PageProps) {
     });
   });
 
-  const articlesFiltered = getPostFiltered<ArticleDocument<string>[]>(articles, searchParams.tags)
-
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 
@@ -69,11 +68,7 @@ export default async function Index({ searchParams }: PageProps) {
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
           <Heading>Articles</Heading>
-          <TagsFilter tags={tags} isFilter={true} tagsSelected={searchParams.tags} baseUrl='/articles'/>
-          {articlesFiltered.length === 0 && <p>We didn`t found anythink articles.</p>}
-          {articlesFiltered.map((article) => (
-            <Article key={article.id} article={article} />
-          ))}
+          <ListArticles articles={articles} />
         </ul>
       </Bounded>
     </Layout>
