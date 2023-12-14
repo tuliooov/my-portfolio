@@ -3,12 +3,8 @@ import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
-import { Article } from "@/components/Article";
 import { Heading } from "@/components/Heading";
 import React from "react";
-import { getPostFiltered } from "@/utils";
-import { TagsFilter } from "@/components/ProjectCard/TagsFilter";
-import { ArticleDocument } from "prismicio-types";
 import ListArticles from "@/components/ListArticles";
 
 export const dynamic = 'force-static'
@@ -29,13 +25,8 @@ export async function generateMetadata() {
   };
 }
 
-interface PageProps {
-  searchParams: {
-    tags?: string[] | string
-  }
-}
 
-export default async function Index({ searchParams }: PageProps) {
+export default async function Index() {
   const client = createClient();
 
   const articles = await client.getAllByType("article", {

@@ -5,7 +5,7 @@ import Link from 'next/link'
 interface TagsFilterProps {
   tags?: string[]
   isFilter?: boolean
-  tagsSelected?: string[] | string
+  tagsSelected: string[]
   baseUrl: string
 }
 
@@ -13,12 +13,8 @@ export const TagsFilter = ({ tags, tagsSelected, baseUrl }: TagsFilterProps) => 
 
   const createTagUrl = () => {
     let tagsQuery = '';
-    if (tagsSelected) {
-      if (Array.isArray(tagsSelected)) {
+    if (tagsSelected.length) {
         tagsQuery = `tags=${tagsSelected.join('&tags=')}`;
-      } else {
-        tagsQuery = `tags=${tagsSelected}`;
-      }
     }
     return `${baseUrl}?${tagsQuery}`
   }

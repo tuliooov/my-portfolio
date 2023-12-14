@@ -3,12 +3,11 @@ import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
-import { Project } from "@/components/ProjectCard";
 import { Heading } from "@/components/Heading";
 import React from "react";
-import { TagsFilter } from "@/components/ProjectCard/TagsFilter";
 import { getPostFiltered } from "@/utils";
 import { ProjectDocument } from "prismicio-types";
+import ListProjects from "@/components/ListProducts";
 
 export const dynamic = 'force-static'
 
@@ -28,13 +27,7 @@ export async function generateMetadata() {
   };
 }
 
-interface PageProps {
-  searchParams: {
-    tags?: string[] | string
-  }
-}
-
-export default async function Index({ searchParams }: PageProps) {
+export default async function Index() {
   const client = createClient();
 
 
@@ -54,8 +47,6 @@ export default async function Index({ searchParams }: PageProps) {
     });
   });
 
-
-  const projectsFiltered = getPostFiltered<ProjectDocument<string>[]>(projects, searchParams.tags)
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 
@@ -69,12 +60,7 @@ export default async function Index({ searchParams }: PageProps) {
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
           <Heading>Projects</Heading>
-
-          <TagsFilter tags={tags} isFilter={true} tagsSelected={searchParams.tags} baseUrl='/projects' />
-          {projectsFiltered.length === 0 && <p>We didn`t found anythink projects.</p>}
-          {projectsFiltered.map((project) => (
-            <Project key={project.id} project={project} />
-          ))}
+          <ListProjects projects={projects} />
         </ul>
       </Bounded>
     </Layout>

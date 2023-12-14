@@ -20,9 +20,9 @@ interface PageProps {
 export default function ListArticles({ articles }: PageProps) {
 
   const searchParams = useSearchParams()
-
   const tagsParam = searchParams.getAll('tags')
 
+  console.log(tagsParam)
   const tags: string[] = [];
   articles.forEach((objeto) => {
     objeto.tags.forEach((tag) => {
@@ -35,7 +35,6 @@ export default function ListArticles({ articles }: PageProps) {
   const articlesFiltered = getPostFiltered<ArticleDocument<string>[]>(articles, tagsParam)
   return (
     <>
-
       <TagsFilter tags={tags} isFilter={true} tagsSelected={tagsParam} baseUrl='/articles' />
       {articlesFiltered.length === 0 && <p>We didn`t found anythink articles.</p>}
       {articlesFiltered.map((article) => (
