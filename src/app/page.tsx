@@ -62,7 +62,7 @@ export default async function Index() {
               {projects.map((project) => (
                 <Project key={project.id} project={project} />
               ))}
-              <ButtonNext href={"/projects"} />
+              <ButtonNext href={"/projects?&tags=ForWork"} />
             </>}
           
           <HorizontalDivider />
