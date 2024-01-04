@@ -32,7 +32,7 @@ export default function ListProjects({ projects }: PageProps) {
   const projectsFiltered = getPostFiltered<ProjectDocument<string>[]>(projects, tagsParam)
   return (
     <>
-      <TagsFilter tags={tags} isFilter={true} tagsSelected={tagsParam} baseUrl='/projects?&tags=ForWork' />
+      <TagsFilter tags={tags} isFilter={true} tagsSelected={tagsParam} baseUrl='/projects' />
       {projectsFiltered.length === 0 && <p>We didn`t found anythink projects.</p>}
       {projectsFiltered.map((project) => (
         <Project key={project.id} project={project} />

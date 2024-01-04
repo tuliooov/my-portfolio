@@ -38,13 +38,15 @@ export default async function Index() {
     ],
     limit: 5
   });
-  const projects = await client.getAllByType("project", {
+  
+  const projects = (await client.getAllByType("project", {
     orderings: [
       { field: "my.project.publishDate", direction: "desc" },
       { field: "document.first_publication_date", direction: "desc" },
     ],
-    limit: 5
-  });
+    limit: 5,
+  })).filter(project => project.tags.includes('ForWork'));
+
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 
@@ -62,7 +64,7 @@ export default async function Index() {
               {projects.map((project) => (
                 <Project key={project.id} project={project} />
               ))}
-              <ButtonNext href={"/projects?&tags=ForWork"} />
+              <ButtonNext href={"/projects"} />
             </>}
           
           <HorizontalDivider />
