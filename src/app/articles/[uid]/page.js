@@ -9,7 +9,6 @@ import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
 import { HorizontalDivider } from "@/components/HorizontalDivider";
-import { useRouter } from "next/navigation";
 import { ButtonBack } from "@/components/ButtonBack";
 import { TagsActions } from "@/components/ProjectCard/Tags";
 
